@@ -1,0 +1,457 @@
+HYPERBARIC OXYGEN THERAPY TREATMENT PROTOCOLS
+=============================================
+
+PROTOCOL OVERVIEW
+-----------------
+This document outlines standardized treatment protocols for the Cocoon HBOT system. All protocols are based on Undersea and Hyperbaric Medical Society (UHMS) guidelines, international standards, and evidence-based research. Protocols must be individualized based on patient condition, medical history, and treatment response.
+
+COCOON SYSTEM SPECIFICATIONS
+----------------------------
+• Pressure Range: 1.00 - 2.00 ATA
+• Oxygen Concentration: 21% - 100%
+• Chamber Type: Monoplace, single-patient
+• Control System: Siemens S7-200 PLC
+• Session Duration: 60, 90, or 120 minutes
+• Compression Rates: Beginner, Normal, Fast
+• Safety Features: Emergency stop, equalization, intercom
+
+STANDARD TREATMENT MODES
+------------------------
+
+1. REST & RELAX MODE
+   Purpose: Wellness, relaxation, mild therapeutic benefit
+   Oxygen Delivery: Continuous flow
+   Typical Settings:
+   - Pressure: 1.3-1.5 ATA
+   - Duration: 60-90 minutes
+   - Compression Rate: Beginner to Normal
+   - Oxygen: 95-100%
+   
+   Applications:
+   - General wellness and relaxation
+   - Stress reduction
+   - Sleep improvement
+   - Mild fatigue recovery
+   - Preventive health maintenance
+
+2. HEALTH & WELLNESS MODE
+   Purpose: Enhanced wellness, recovery, performance
+   Oxygen Delivery: Intermittent flow (air breaks)
+   Typical Settings:
+   - Pressure: 1.4-1.6 ATA
+   - Duration: 90 minutes
+   - Compression Rate: Normal
+   - Oxygen: 100% with 5-minute air breaks every 25 minutes
+   
+   Applications:
+   - Athletic recovery
+   - Enhanced cognitive function
+   - Immune system support
+   - Anti-aging protocols
+   - Energy enhancement
+
+3. PROFESSIONAL RECOVERY MODE
+   Purpose: Sports recovery, performance enhancement
+   Oxygen Delivery: Intermittent flow with optimized cycles
+   Typical Settings:
+   - Pressure: 1.5-1.8 ATA
+   - Duration: 90-120 minutes
+   - Compression Rate: Normal to Fast
+   - Oxygen: 100% with 10-minute air breaks every 30 minutes
+   
+   Applications:
+   - Post-exercise recovery
+   - Injury rehabilitation
+   - Performance optimization
+   - Muscle recovery
+   - Endurance enhancement
+
+4. CUSTOM MODE
+   Purpose: Individualized treatment protocols
+   Oxygen Delivery: Continuous or intermittent (as prescribed)
+   Settings: Customizable based on medical prescription
+   - Pressure: 1.0-2.0 ATA (as prescribed)
+   - Duration: 60-120 minutes
+   - Compression Rate: As appropriate
+   - Oxygen: Variable concentration
+   
+   Applications:
+   - Medical conditions requiring specific protocols
+   - Research protocols
+   - Specialized treatments
+   - Patient-specific modifications
+
+5. O2GENES 100 PROTOCOL
+   Purpose: Optimized intermittent protocol
+   Oxygen Delivery: Specialized intermittent with pressure variations
+   Settings:
+   - Pressure: 1.4-1.6 ATA with periodic variations
+   - Duration: 100 minutes
+   - Compression Rate: Normal
+   - Oxygen: Intermittent with optimized timing
+   
+   Cycle Pattern:
+   - 20 minutes 100% O2 at 1.4 ATA
+   - 5 minutes air break
+   - 25 minutes 100% O2 at 1.6 ATA
+   - 5 minutes air break
+   - 20 minutes 100% O2 at 1.5 ATA
+   - 5 minutes air break
+   - 20 minutes 100% O2 at 1.4 ATA
+
+6. O2GENES 120 PROTOCOL
+   Purpose: Extended optimized treatment
+   Oxygen Delivery: Extended intermittent with pressure cycling
+   Settings:
+   - Pressure: 1.5-1.8 ATA with variations
+   - Duration: 120 minutes
+   - Compression Rate: Normal
+   - Oxygen: Complex intermittent pattern
+   
+   Cycle Pattern:
+   - 30 minutes 100% O2 at 1.5 ATA
+   - 10 minutes air break
+   - 30 minutes 100% O2 at 1.7 ATA
+   - 10 minutes air break
+   - 25 minutes 100% O2 at 1.8 ATA
+   - 10 minutes air break
+   - 25 minutes 100% O2 at 1.6 ATA
+
+CLINICAL CONDITION PROTOCOLS
+----------------------------
+
+WOUND HEALING PROTOCOL
+Indication: Diabetic ulcers, radiation wounds, chronic ulcers
+Standard Protocol:
+- Pressure: 2.0-2.4 ATA
+- Duration: 90-120 minutes
+- Frequency: Daily, 5-7 days per week
+- Total Sessions: 20-40 treatments
+- Oxygen: 100% continuous
+- Special Considerations: Wound assessment before each session
+
+CARBON MONOXIDE POISONING
+Indication: CO poisoning, smoke inhalation
+Emergency Protocol:
+- Pressure: 2.8-3.0 ATA
+- Duration: 90 minutes initially, then 2.0 ATA for 60 minutes
+- Frequency: Immediate, may repeat within 24 hours
+- Total Sessions: 1-3 treatments
+- Oxygen: 100% continuous
+- Special Considerations: Neurological monitoring essential
+
+DECOMPRESSION SICKNESS
+Indication: Diving accidents, altitude sickness
+Treatment Tables: US Navy Table 6 (modified for civilian use)
+- Pressure: 2.8 ATA descending to 1.9 ATA
+- Duration: 4 hours 45 minutes total
+- Oxygen: 100% with air breaks
+- Special Considerations: Neurological assessment required
+
+RADIATION TISSUE INJURY
+Indication: Osteoradionecrosis, soft tissue radionecrosis
+Standard Protocol:
+- Pressure: 2.0-2.4 ATA
+- Duration: 90-120 minutes
+- Frequency: Daily, 5 days per week
+- Total Sessions: 20-30 treatments
+- Oxygen: 100% continuous or intermittent
+
+NECROTIZING INFECTIONS
+Indication: Gas gangrene, necrotizing fasciitis
+Acute Protocol:
+- Pressure: 2.5-3.0 ATA
+- Duration: 90-120 minutes
+- Frequency: 2-3 times daily initially
+- Total Sessions: Variable based on response
+- Oxygen: 100% continuous
+- Special Considerations: Surgical intervention coordination
+
+SUDDEN HEARING LOSS
+Indication: Idiopathic sudden sensorineural hearing loss
+Standard Protocol:
+- Pressure: 2.0-2.5 ATA
+- Duration: 90 minutes
+- Frequency: Daily or twice daily
+- Total Sessions: 10-20 treatments
+- Oxygen: 100% continuous
+- Special Considerations: Audiometric testing
+
+COMPRESSION AND DECOMPRESSION PROTOCOLS
+--------------------------------------
+
+COMPRESSION RATES:
+
+1. BEGINNER RATE
+   - Rate: 1-2 feet per minute (0.3-0.6 m/min)
+   - Total Compression Time: 15-20 minutes to 2.0 ATA
+   - Indications: First-time patients, elderly, anxious patients
+   - Special Care: Frequent equalization checks
+
+2. NORMAL RATE
+   - Rate: 2-3 feet per minute (0.6-0.9 m/min)
+   - Total Compression Time: 10-15 minutes to 2.0 ATA
+   - Indications: Standard treatment protocol
+   - Special Care: Regular communication with patient
+
+3. FAST RATE
+   - Rate: 3-5 feet per minute (0.9-1.5 m/min)
+   - Total Compression Time: 6-10 minutes to 2.0 ATA
+   - Indications: Emergency protocols, experienced patients
+   - Special Care: Password required, close monitoring
+   - Warning: Only for pressures ≥1.5 ATA or emergency situations
+
+DECOMPRESSION PROTOCOLS:
+- Standard Rate: 1-2 feet per minute (0.3-0.6 m/min)
+- Emergency Rate: Up to 60 feet per minute for life-threatening situations
+- Decompression Stops: At 30 feet (1.9 ATA) and 20 feet (1.6 ATA)
+- Stop Duration: 5-10 minutes each
+- Final Ascent: Very slow from 10 feet to surface
+
+PATIENT POSITIONING AND COMFORT
+-------------------------------
+
+STANDARD POSITIONING:
+- Supine position (lying flat)
+- Head elevated 15-30 degrees
+- Arms comfortable at sides
+- Legs uncrossed and relaxed
+- Pillows for comfort (100% cotton)
+
+COMFORT MEASURES:
+- Temperature control (18-24°C)
+- Humidity control (40-60%)
+- Lighting options (cocoon lights)
+- Entertainment (external TV/music)
+- Communication (intercom system)
+
+SPECIAL POSITIONING:
+- Wound patients: Affected area accessible
+- Pregnant patients: Left lateral tilt
+- Claustrophobic patients: See-through chamber areas
+- Elderly patients: Extra padding and support
+
+MONITORING REQUIREMENTS
+----------------------
+
+CONTINUOUS MONITORING:
+- Chamber pressure (ATA)
+- Oxygen concentration (%)
+- Patient vital signs
+- Time elapsed/remaining
+- Patient communication status
+
+VITAL SIGN MONITORING:
+- Blood pressure (if indicated)
+- Heart rate and rhythm
+- Respiratory rate
+- Oxygen saturation
+- Temperature
+- Neurological status
+
+COMMUNICATION PROTOCOLS:
+- Visual contact maintained
+- Intercom check every 15 minutes
+- Patient comfort assessment
+- Emergency signal understanding
+- Pressure equalization assistance
+
+SPECIALIZED PROTOCOLS
+--------------------
+
+PEDIATRIC PROTOCOLS:
+Age Modifications:
+- 0-2 years: Pressure limited to 1.5 ATA
+- 2-12 years: Standard protocols with close monitoring
+- 12+ years: Adult protocols with age considerations
+
+Special Considerations:
+- Parental presence when possible
+- Sedation protocols if needed
+- Smaller pressure changes
+- More frequent communication
+- Entertainment appropriate for age
+
+GERIATRIC PROTOCOLS:
+Age-Related Modifications:
+- Slower compression/decompression rates
+- More frequent vital sign monitoring
+- Cardiovascular assessment
+- Cognitive function checks
+- Medication interaction review
+
+Special Considerations:
+- Fall prevention measures
+- Hearing assessment
+- Vision accommodation
+- Mobility assistance
+- Family involvement
+
+PREGNANCY PROTOCOLS:
+Indications: Life-threatening conditions only
+- Carbon monoxide poisoning
+- Severe decompression sickness
+- Gas gangrene
+
+Modifications:
+- Pressure limited to 2.4 ATA maximum
+- Shorter treatment durations
+- Left lateral positioning
+- Continuous fetal monitoring if available
+- Obstetric consultation required
+
+AIR BREAK PROTOCOLS
+------------------
+
+PURPOSE OF AIR BREAKS:
+- Prevent CNS oxygen toxicity
+- Reduce pulmonary toxicity risk
+- Improve patient comfort
+- Allow physiological rest periods
+
+STANDARD AIR BREAK SCHEDULE:
+- Every 20-30 minutes of oxygen breathing
+- Duration: 5-10 minutes
+- Maintain chamber pressure
+- Patient breathes chamber air (compressed air)
+- Continue monitoring during breaks
+
+MODIFIED AIR BREAK SCHEDULES:
+Long Treatments (>90 minutes):
+- 10-minute breaks every 25 minutes
+- Additional breaks if symptoms occur
+- Flexibility based on patient tolerance
+
+Emergency Treatments:
+- Air breaks may be shortened or eliminated
+- Risk-benefit assessment required
+- Close monitoring for toxicity signs
+
+TREATMENT MODIFICATIONS
+----------------------
+
+PROTOCOL ADJUSTMENTS:
+Based on Patient Response:
+- Pressure reduction for intolerance
+- Duration modification for comfort
+- Rate changes for equalization difficulty
+- Oxygen concentration adjustments
+
+Based on Medical Conditions:
+- COPD: Lower oxygen concentrations
+- Heart disease: Slower rates, monitoring
+- Diabetes: Blood glucose management
+- Seizure disorders: Lower pressures
+
+RESCUE PROTOCOLS:
+For Treatment Intolerance:
+1. Immediate communication assessment
+2. Pressure equalization if needed
+3. Treatment pause or modification
+4. Medical evaluation
+5. Protocol revision if necessary
+
+QUALITY ASSURANCE
+-----------------
+
+PRE-TREATMENT VERIFICATION:
+- Medical clearance confirmed
+- Protocol prescription verified
+- Equipment function checked
+- Safety equipment ready
+- Patient preparation complete
+
+TREATMENT DOCUMENTATION:
+- Protocol used and modifications
+- Pressure and time profile
+- Patient response and comfort
+- Any complications or concerns
+- Vital signs if monitored
+- Treatment completion status
+
+POST-TREATMENT ASSESSMENT:
+- Patient condition evaluation
+- Side effects assessment
+- Treatment tolerance
+- Next session planning
+- Follow-up instructions
+
+EMERGENCY PROTOCOLS
+------------------
+
+TREATMENT ABORT CRITERIA:
+- Patient distress or panic
+- Equipment malfunction
+- Medical emergency
+- Fire alarm activation
+- Severe weather warning
+- Power failure
+
+EMERGENCY PROCEDURES:
+1. Immediate patient communication
+2. Assess situation severity
+3. Emergency decompression if needed
+4. Medical evaluation
+5. Incident documentation
+6. Equipment inspection
+7. Protocol review
+
+TRAINING AND COMPETENCY
+----------------------
+
+OPERATOR REQUIREMENTS:
+- Hyperbaric technician certification
+- Protocol training completion
+- Emergency response certification
+- Equipment operation proficiency
+- Annual competency assessment
+
+PHYSICIAN REQUIREMENTS:
+- Hyperbaric medicine training
+- Protocol prescription authority
+- Emergency management capability
+- Continuing education compliance
+- Medical director oversight
+
+DOCUMENTATION STANDARDS
+-----------------------
+
+REQUIRED DOCUMENTATION:
+- Medical prescription
+- Informed consent
+- Pre-treatment assessment
+- Treatment record
+- Patient response
+- Complications or modifications
+- Post-treatment status
+- Discharge instructions
+
+RECORD RETENTION:
+- Medical records: Per local regulations
+- Treatment logs: Minimum 7 years
+- Equipment records: Per manufacturer requirements
+- Training records: Current certifications plus 3 years
+- Incident reports: Permanent retention
+
+PROTOCOL UPDATES
+----------------
+
+REVIEW SCHEDULE:
+- Annual protocol review
+- Quarterly safety assessment
+- Monthly equipment evaluation
+- Continuous quality improvement
+- Literature review integration
+
+UPDATE AUTHORIZATION:
+- Medical director approval required
+- Staff training for changes
+- Documentation of modifications
+- Patient notification if affected
+- Regulatory compliance verification
+
+Remember: All treatment protocols must be prescribed by qualified physicians and administered by trained hyperbaric personnel. Patient safety is the highest priority, and protocols should be modified based on individual patient needs and responses.
+
+EMERGENCY CONTACT: +65 8802 9507 (O2genes Support)
+MEDICAL DIRECTOR: [To be filled with current contact]
+REGULATORY AUTHORITY: [Local health authority contact]

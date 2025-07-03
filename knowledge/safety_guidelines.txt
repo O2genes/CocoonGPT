@@ -1,0 +1,463 @@
+HYPERBARIC OXYGEN THERAPY SAFETY GUIDELINES
+==========================================
+
+CRITICAL SAFETY OVERVIEW
+------------------------
+Hyperbaric oxygen therapy involves breathing 100% oxygen at increased atmospheric pressure. While generally safe when properly administered, HBOT requires strict adherence to safety protocols due to fire risk in oxygen-enriched environments and potential for pressure-related injuries.
+
+EMERGENCY CONTACT INFORMATION
+-----------------------------
+PRIMARY EMERGENCY: 999 (Singapore Emergency Services)
+O2GENES SUPPORT: +65 8802 9507
+FACILITY MEDICAL DIRECTOR: [Contact details to be filled]
+POISON CONTROL: 1777 (Singapore)
+HYPERBARIC EMERGENCY HOTLINE: [24/7 consultant contact]
+
+ABSOLUTE CONTRAINDICATIONS
+--------------------------
+These conditions prohibit HBOT treatment entirely:
+
+1. UNTREATED PNEUMOTHORAX
+   - Collapsed lung that has not been treated
+   - Risk of tension pneumothorax during decompression
+   - Requires chest tube placement before HBOT
+
+2. CERTAIN CHEMOTHERAPY DRUGS
+   - Doxorubicin (Adriamycin) - current or recent use
+   - Cisplatin - increases pulmonary toxicity risk
+   - Bleomycin - significant pulmonary fibrosis risk
+   - Disulfiram (Antabuse) - blocks antioxidant enzymes
+
+RELATIVE CONTRAINDICATIONS
+--------------------------
+Conditions requiring careful evaluation and monitoring:
+
+1. PREGNANCY
+   - Limited safety data available
+   - Potential teratogenic effects unknown
+   - Risk-benefit analysis required
+   - Alternative treatments preferred
+
+2. SEVERE COPD WITH CO2 RETENTION
+   - Risk of respiratory depression
+   - Requires arterial blood gas analysis
+   - May need modified protocols
+
+3. ACTIVE UPPER RESPIRATORY INFECTIONS
+   - Difficulty equalizing ear pressure
+   - Risk of middle ear barotrauma
+   - Sinusitis complications
+   - Treatment should be delayed until resolved
+
+4. SEVERE CLAUSTROPHOBIA
+   - May require anxiolytic medication
+   - Gradual acclimatization program
+   - Alternative chamber options
+   - Psychological evaluation
+
+5. SEIZURE DISORDERS
+   - Oxygen toxicity can lower seizure threshold
+   - Medication review required
+   - Close monitoring during treatment
+   - Emergency protocols in place
+
+FIRE SAFETY PROTOCOLS
+---------------------
+Fire risk is dramatically increased in oxygen-enriched environments:
+
+PROHIBITED ITEMS IN CHAMBER:
+• ALL electronic devices (phones, tablets, smartwatches)
+• Jewelry (metal rings, necklaces, earrings)
+• Synthetic clothing and fabrics
+• Petroleum-based products (Vaseline, hair gel, makeup)
+• Lotions, creams, and oils
+• Nail polish and cosmetics
+• Lighters, matches, any ignition sources
+• Wool clothing (static electricity risk)
+• Dentures with metal clasps
+• Hearing aids (unless hyperbaric-approved)
+• Contact lenses (in some protocols)
+• Medical devices with batteries
+
+REQUIRED CLOTHING AND MATERIALS:
+• 100% cotton hospital gown
+• 100% cotton undergarments
+• Cotton socks only
+• Cotton bed linens and pillows
+• No synthetic blends whatsoever
+
+FIRE PREVENTION MEASURES:
+• Static electricity elimination procedures
+• Grounding of all electrical equipment
+• Fire suppression systems in place
+• Emergency evacuation procedures
+• Regular safety equipment inspections
+• Staff fire response training
+
+PRE-TREATMENT SAFETY SCREENING
+------------------------------
+MEDICAL HISTORY REVIEW:
+• Complete cardiovascular assessment
+• Respiratory function evaluation
+• Neurological examination
+• Previous hyperbaric experience
+• Current medications review
+• Allergy assessment
+
+PHYSICAL EXAMINATION:
+• Otoscopic ear examination
+• Tympanic membrane assessment
+• Nasal passage evaluation
+• Dental examination for air-filled cavities
+• Chest X-ray (if indicated)
+• Vital signs baseline
+
+INFORMED CONSENT PROCESS:
+• Explanation of treatment risks and benefits
+• Discussion of potential side effects
+• Emergency procedures overview
+• Patient questions answered
+• Written consent obtained
+• Copy provided to patient
+
+PRESSURE-RELATED SAFETY
+-----------------------
+EAR BAROTRAUMA PREVENTION:
+• Teaching proper equalization techniques
+• Valsalva maneuver demonstration
+• Swallowing and jaw movement exercises
+• Recognition of ear pressure discomfort
+• Immediate communication of problems
+• Equalization function availability
+
+SINUS BAROTRAUMA PREVENTION:
+• Pre-treatment decongestant if needed
+• Avoiding treatment during upper respiratory infections
+• Proper head positioning
+• Gradual compression rates
+• Patient communication throughout
+
+DENTAL CONSIDERATIONS:
+• Recent dental work evaluation
+• Air-filled cavities assessment
+• Temporary filling stability
+• Orthodontic appliance review
+• Pain communication protocols
+
+OXYGEN TOXICITY PREVENTION
+--------------------------
+CENTRAL NERVOUS SYSTEM (CNS) TOXICITY:
+• Pressure and time limitations
+• Air break protocols for long treatments
+• Early warning sign recognition
+• Immediate treatment cessation if symptoms occur
+• Seizure management protocols
+
+CNS TOXICITY SYMPTOMS:
+• Visual disturbances
+• Hearing changes
+• Nausea and vomiting
+• Muscle twitching
+• Dizziness or vertigo
+• Seizure activity
+
+PULMONARY OXYGEN TOXICITY:
+• Treatment duration limits
+• Multiple session protocols
+• Lung function monitoring
+• Cough or chest pain assessment
+• Breathing difficulty evaluation
+
+CHAMBER SAFETY SYSTEMS
+----------------------
+COCOON CHAMBER SAFETY FEATURES:
+• Emergency decompression system
+• Two-way communication (intercom)
+• Visual monitoring system
+• Pressure relief valves
+• Fire suppression system
+• Emergency oxygen supply
+• Backup power systems
+• Medical gas alarms
+
+MONITORING EQUIPMENT:
+• Continuous pressure monitoring
+• Oxygen concentration measurement
+• Temperature and humidity sensors
+• Patient vital sign monitoring
+• Video surveillance system
+• Audio communication system
+
+EMERGENCY PROCEDURES
+-------------------
+RAPID DECOMPRESSION PROTOCOL:
+1. Assess patient condition immediately
+2. Activate emergency decompression
+3. Maintain patient communication
+4. Monitor for decompression sickness
+5. Provide oxygen if needed
+6. Arrange medical evaluation
+7. Document incident thoroughly
+
+FIRE EMERGENCY PROTOCOL:
+1. Immediate chamber venting
+2. Patient evacuation procedures
+3. Fire suppression activation
+4. Emergency services notification
+5. Medical assessment of patient
+6. Incident investigation
+7. Facility safety review
+
+MEDICAL EMERGENCY IN CHAMBER:
+1. Assess patient condition via intercom
+2. Consider emergency decompression
+3. Prepare medical intervention
+4. Coordinate with emergency services
+5. Document vital signs and symptoms
+6. Provide appropriate medical care
+7. Transfer to hospital if needed
+
+PATIENT SAFETY EDUCATION
+------------------------
+PRE-TREATMENT EDUCATION:
+• Explanation of chamber operation
+• Safety rules and restrictions
+• Communication procedures
+• Emergency protocols
+• Comfort measures available
+• Expected sensations during treatment
+
+PRESSURE EQUALIZATION TRAINING:
+• Demonstration of techniques
+• Practice sessions if needed
+• Recognition of pressure discomfort
+• When to request equalization pause
+• Importance of immediate communication
+
+COMFORT AND ANXIETY MANAGEMENT:
+• Relaxation techniques
+• Entertainment options
+• Positioning for comfort
+• Temperature control
+• Communication availability
+
+STAFF SAFETY RESPONSIBILITIES
+-----------------------------
+OPERATOR QUALIFICATIONS:
+• Certified hyperbaric technician
+• CPR and first aid certification
+• Emergency response training
+• Equipment operation proficiency
+• Safety protocol knowledge
+• Continuing education requirements
+
+MONITORING RESPONSIBILITIES:
+• Continuous patient observation
+• Vital sign assessment
+• Communication maintenance
+• Equipment function verification
+• Safety protocol enforcement
+• Emergency response readiness
+
+DAILY SAFETY CHECKS:
+• Chamber integrity inspection
+• Safety equipment testing
+• Communication system verification
+• Emergency equipment readiness
+• Fire suppression system check
+• Documentation of safety status
+
+INFECTION CONTROL
+-----------------
+CHAMBER SANITATION:
+• Thorough cleaning between patients
+• Disinfection of all surfaces
+• Air filtration system maintenance
+• Linens and gown sterilization
+• Equipment decontamination
+
+PATIENT SCREENING:
+• Infectious disease assessment
+• Wound infection evaluation
+• Respiratory infection check
+• Skin condition examination
+• Immunocompromised status review
+
+MEDICATION SAFETY
+-----------------
+DRUG INTERACTIONS:
+• Review all current medications
+• Assess interaction potential
+• Timing of medication administration
+• Blood pressure medication effects
+• Anticoagulant considerations
+
+CONTRAINDICATED MEDICATIONS:
+• Doxorubicin (increased cardiotoxicity)
+• Cisplatin (enhanced ototoxicity)
+• Bleomycin (pulmonary toxicity risk)
+• Disulfiram (antioxidant enzyme inhibition)
+• Acetazolamide (metabolic acidosis risk)
+
+SPECIAL POPULATIONS
+------------------
+PEDIATRIC CONSIDERATIONS:
+• Age-appropriate communication
+• Parental presence when possible
+• Sedation protocols if needed
+• Size-appropriate equipment
+• Specialized training requirements
+
+ELDERLY PATIENTS:
+• Cardiovascular status assessment
+• Cognitive function evaluation
+• Mobility assistance needs
+• Medication interaction review
+• Fall prevention measures
+
+DIABETIC PATIENTS:
+• Blood glucose monitoring
+• Insulin timing adjustments
+• Hypoglycemia prevention
+• Wound care considerations
+• Circulation assessment
+
+INCIDENT REPORTING
+-----------------
+REPORTABLE EVENTS:
+• Any patient injury or adverse event
+• Equipment malfunction or failure
+• Safety protocol violations
+• Near-miss incidents
+• Fire or emergency situations
+
+DOCUMENTATION REQUIREMENTS:
+• Incident description and timeline
+• Patient condition assessment
+• Actions taken and outcomes
+• Witness statements
+• Equipment involved
+• Root cause analysis
+• Preventive measures implemented
+
+QUALITY ASSURANCE
+-----------------
+SAFETY AUDITS:
+• Regular facility inspections
+• Equipment maintenance verification
+• Staff competency assessment
+• Protocol compliance review
+• Patient safety monitoring
+
+CONTINUOUS IMPROVEMENT:
+• Incident analysis and trending
+• Safety protocol updates
+• Staff training enhancement
+• Equipment upgrades
+• Best practice implementation
+
+REGULATORY COMPLIANCE:
+• Health authority requirements
+• Professional organization standards
+• Accreditation maintenance
+• Safety regulation adherence
+• Documentation standards
+
+POST-TREATMENT SAFETY
+---------------------
+IMMEDIATE POST-TREATMENT:
+• Gradual pressure normalization
+• Patient condition assessment
+• Side effect evaluation
+• Vital sign monitoring
+• Discharge instructions
+
+DELAYED EFFECTS MONITORING:
+• Instructions for symptom recognition
+• Emergency contact information
+• Follow-up appointment scheduling
+• Activity restrictions if any
+• Medication adjustments
+
+WARNING SIGNS TO REPORT:
+• Severe ear or sinus pain
+• Vision or hearing changes
+• Breathing difficulties
+• Chest pain or discomfort
+• Unusual fatigue or weakness
+• Signs of decompression sickness
+
+FAMILY AND CAREGIVER EDUCATION
+------------------------------
+SUPPORT PERSON GUIDELINES:
+• Understanding of treatment process
+• Recognition of adverse reactions
+• Emergency contact procedures
+• Transportation arrangements
+• Home care instructions
+
+COMMUNICATION PROTOCOLS:
+• Regular updates during treatment
+• Post-treatment discussions
+• Emergency notification procedures
+• Questions and concerns addressing
+
+FACILITY SAFETY STANDARDS
+-------------------------
+ENVIRONMENTAL CONTROLS:
+• Temperature and humidity regulation
+• Air quality monitoring
+• Noise level management
+• Lighting adequacy
+• Emergency exit accessibility
+
+EQUIPMENT MAINTENANCE:
+• Scheduled preventive maintenance
+• Calibration verification
+• Safety system testing
+• Backup equipment availability
+• Replacement part inventory
+
+TRAINING AND CERTIFICATION:
+• Initial staff training programs
+• Ongoing education requirements
+• Competency assessments
+• Emergency drill participation
+• Professional development
+
+RISK MANAGEMENT
+--------------
+RISK ASSESSMENT:
+• Patient-specific risk evaluation
+• Treatment protocol risk analysis
+• Equipment failure risk assessment
+• Environmental hazard identification
+• Emergency response capability
+
+RISK MITIGATION:
+• Safety protocol implementation
+• Staff training and competency
+• Equipment redundancy
+• Emergency response planning
+• Continuous monitoring systems
+
+INSURANCE AND LIABILITY:
+• Professional liability coverage
+• Facility insurance requirements
+• Patient safety reporting
+• Legal compliance verification
+• Risk management consultation
+
+REMEMBER: SAFETY IS EVERYONE'S RESPONSIBILITY
+============================================
+• Never compromise safety protocols
+• Report all safety concerns immediately
+• Maintain continuous vigilance
+• Prioritize patient wellbeing above all
+• When in doubt, stop and assess
+• Seek guidance from medical director
+• Document all safety-related activities
+• Participate in safety training programs
+• Contribute to safety culture improvement
+
+This safety guideline document must be reviewed regularly and updated as protocols, equipment, or regulations change. All staff members must be familiar with these guidelines and maintain current certifications in hyperbaric medicine and emergency response.

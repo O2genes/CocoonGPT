@@ -1,0 +1,19 @@
+# CocoonGPT - Hyperbaric Oxygen Therapy Assistant
+# Essential Python Package Requirements
+# ====================================
+
+# Core Web Framework
+Flask==2.3.3
+Flask-CORS==4.0.0
+
+# OpenAI API Integration
+openai==1.6.1
+
+# Environment Variables
+python-dotenv==1.0.0
+
+# HTTP Requests (for any additional API calls if needed)
+requests==2.31.0
+
+# Optional: For production deployment
+gunicorn==21.2.0
