@@ -13,15 +13,24 @@ CORS(app)
 
 # Configure OpenAI client
 client = None
-try:
-    api_key = os.getenv('OPENAI_API_KEY')
-    if api_key:
-        client = OpenAI(api_key=api_key)
-    else:
+api_key = os.getenv('OPENAI_API_KEY')
+
+def initialize_openai_client():
+    global client
+    if not api_key:
         print("Warning: OPENAI_API_KEY environment variable not set")
-except Exception as e:
-    print(f"Error initializing OpenAI client: {e}")
-    client = None
+        return None
+        
+    try:
+        client = OpenAI(api_key=api_key)
+        print("OpenAI client initialized successfully")
+        return client
+    except Exception as e:
+        print(f"Error initializing OpenAI client: {e}")
+        return None
+
+# Initialize client
+client = initialize_openai_client()
 
 # CocoonGPT System Prompt
 COCOONGPT_SYSTEM_PROMPT = """You are a hyperbaric oxygen therapy professional. You should be equipped with all necessary hyperbaric oxygen therapy knowledge. You should learn all the knowledge from all attached pdf files and necessary online HBOT knowledge when answering questions.
@@ -76,12 +85,15 @@ def chat():
         user_role = data.get('user_role', 'user')
         session_id = data.get('session_id', 'default')
         
-        # Check if OpenAI client is available
+        # Check if OpenAI client is available, try to initialize if needed
         if client is None:
-            return jsonify({
-                "error": "OpenAI API key not configured. Please set your OPENAI_API_KEY environment variable.",
-                "status": "error"
-            }), 500
+            global client
+            client = initialize_openai_client()
+            if client is None:
+                return jsonify({
+                    "error": "OpenAI API key not configured. Please set your OPENAI_API_KEY environment variable.",
+                    "status": "error"
+                }), 500
         
         # Initialize conversation history for new sessions
         if session_id not in conversation_sessions:
