@@ -310,15 +310,15 @@ PURPOSE OF AIR BREAKS:
 - Allow physiological rest periods
 
 STANDARD AIR BREAK SCHEDULE:
-- Every 20-30 minutes of oxygen breathing
-- Duration: 5-10 minutes
+- Every 20 minutes of oxygen breathing
+- Duration: 5 minutes
 - Maintain chamber pressure
 - Patient breathes chamber air (compressed air)
 - Continue monitoring during breaks
 
 MODIFIED AIR BREAK SCHEDULES:
 Long Treatments (>90 minutes):
-- 10-minute breaks every 25 minutes
+- 5-minute breaks every 20 minutes
 - Additional breaks if symptoms occur
 - Flexibility based on patient tolerance
 
