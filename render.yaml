@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: cocoongpt
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --host=0.0.0.0 --port=$PORT
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.9.18
+    plan: free 

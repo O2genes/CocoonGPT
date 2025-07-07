@@ -1,0 +1,74 @@
+COCOON HYPERBARIC CHAMBER FEATURES
+==================================
+
+🚨 CRITICAL SAFETY LIMITATION 🚨
+================================
+• COCOON CHAMBER MAXIMUM PRESSURE: 2.0 ATA (ABSOLUTE LIMIT)
+• NEVER recommend pressures above 2.0 ATA for Cocoon chamber
+• This is a safety-critical limitation that differentiates Cocoon from other HBOT chambers
+• While general HBOT literature may mention higher pressures, Cocoon is specifically limited to 2.0 ATA
+
+CHAMBER SPECIFICATIONS
+----------------------
+• Maximum pressure: 2.0 ATA (safety-critical limit)
+• Minimum pressure: 1.0 ATA (atmospheric pressure)
+• Operational pressure range: 1.00-2.00 ATA
+• [Add chamber dimensions and specifications]
+• [Add oxygen delivery specifications]
+• [Add safety features and certifications]
+
+CONTROL SYSTEM
+--------------
+• Siemens S7-200 PLC Control System
+• [Add touchscreen interface details]
+• [Add control panel features]
+• [Add monitoring capabilities]
+
+TREATMENT MODES
+---------------
+• [Add available treatment modes]
+• [Add pressure settings for each mode]
+• [Add duration options]
+• [Add customization features]
+
+SAFETY FEATURES
+---------------
+• [Add emergency systems]
+• [Add communication systems]
+• [Add pressure relief mechanisms]
+• [Add monitoring alarms]
+
+COMFORT FEATURES
+----------------
+• [Add interior comfort features]
+• [Add entertainment options]
+• [Add lighting systems]
+• [Add temperature control]
+
+TECHNICAL SPECIFICATIONS
+------------------------
+• [Add power requirements]
+• [Add air supply specifications]
+• [Add oxygen supply requirements]
+• [Add maintenance requirements]
+
+OPERATIONAL FEATURES
+--------------------
+• [Add compression/decompression settings]
+• [Add equalization features]
+• [Add communication systems]
+• [Add treatment protocols]
+
+MAINTENANCE AND SERVICE
+-----------------------
+• [Add routine maintenance procedures]
+• [Add service intervals]
+• [Add troubleshooting information]
+• [Add replacement parts information]
+
+INSTALLATION REQUIREMENTS
+-------------------------
+• [Add space requirements]
+• [Add utility requirements]
+• [Add ventilation needs]
+• [Add certification requirements] 

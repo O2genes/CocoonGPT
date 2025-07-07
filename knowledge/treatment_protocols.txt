@@ -452,6 +452,4 @@ UPDATE AUTHORIZATION:
 
 Remember: All treatment protocols must be prescribed by qualified physicians and administered by trained hyperbaric personnel. Patient safety is the highest priority, and protocols should be modified based on individual patient needs and responses.
 
-EMERGENCY CONTACT: +65 8802 9507 (O2genes Support)
-MEDICAL DIRECTOR: [To be filled with current contact]
-REGULATORY AUTHORITY: [Local health authority contact]
+EMERGENCY CONTACT: +65 8802 9507 (O2genes Support) 

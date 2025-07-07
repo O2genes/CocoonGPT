@@ -31,7 +31,6 @@ class CocoonGPT {
             sendButton: document.getElementById('sendButton'),
             inputStatus: document.getElementById('inputStatus'),
             clearChatBtn: document.getElementById('clearChat'),
-            exportChatBtn: document.getElementById('exportChat'),
             toastContainer: document.getElementById('toastContainer')
         };
     }
@@ -57,7 +56,6 @@ class CocoonGPT {
 
         // Chat controls
         this.elements.clearChatBtn.addEventListener('click', () => this.clearChat());
-        this.elements.exportChatBtn.addEventListener('click', () => this.exportChat());
 
         // Window resize handler
         window.addEventListener('resize', this.handleResize.bind(this));
@@ -83,8 +81,29 @@ class CocoonGPT {
         this.elements.sendButton.disabled = false;
         this.elements.inputStatus.textContent = `Selected role: ${role.charAt(0).toUpperCase() + role.slice(1)}`;
 
-        // Add role confirmation message
-        this.addMessage('assistant', `Thank you for selecting your role as ${role}. I'm CocoonGPT, your professional HBOT assistant. How can I help you today?`);
+        // Add varied role confirmation message
+        const roleMessageOptions = {
+            'user': [
+                "Perfect! I'm excited to help you with your HBOT journey. I'll make sure to explain everything clearly and help you feel comfortable with the Cocoon system. What's on your mind?",
+                "Wonderful! As someone experiencing HBOT, you probably have questions about what to expect. I'm here to walk you through everything about the Cocoon system. What would you like to explore first?",
+                "Great choice! I love helping people understand HBOT and feel confident about their treatments. Whether you're curious about the process, safety, or what the experience is like, I'm here for you. What's your biggest question right now?"
+            ],
+            'clinic staff': [
+                "Great to meet you! I'm here as your collaborative resource for the Cocoon system. Whether you need technical insights, patient guidance tips, or help with protocols, I'm ready to support your important work. What's on your mind today?",
+                "Excellent! I know you're the expert when it comes to patient care, and I'm here to support you with Cocoon-specific knowledge. From troubleshooting to treatment protocols, what would be most helpful right now?",
+                "Perfect! I'm excited to work with you on anything Cocoon-related. Whether it's technical questions, patient scenarios, or system optimization, I'm here to collaborate. What's your current focus?"
+            ],
+            'operator': [
+                "Excellent! I'm ready to dive into the technical details with you. From the Siemens S7-200 control system to sensor diagnostics and troubleshooting, let's get technical. What system aspect interests you most?",
+                "Perfect! As the technical expert, you probably have some specific questions about the Cocoon's operation. I'm excited to explore the control systems, maintenance protocols, or any technical challenges you're facing. Where should we start?",
+                "Great! I love getting into the technical specifics with operators. Whether it's PLC programming, system diagnostics, or performance optimization, I'm here to dig deep. What technical topic is on your radar today?"
+            ]
+        };
+        
+        // Select a random message from the appropriate role's options
+        const messages = roleMessageOptions[role] || [`Thank you for selecting your role as ${role}. I'm ready to help!`];
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        this.addMessage('assistant', randomMessage);
 
         // Focus on input
         this.elements.messageInput.focus();
@@ -169,7 +188,7 @@ class CocoonGPT {
             (this.userRole === 'user' ? '<i class="fas fa-user"></i>' : 
              this.userRole === 'clinic staff' ? '<i class="fas fa-user-md"></i>' : 
              '<i class="fas fa-cogs"></i>') : 
-            '<i class="fas fa-robot"></i>';
+            '<span class="avatar-text">O2</span>';
 
         const contentDiv = document.createElement('div');
         contentDiv.className = 'message-content';
@@ -207,7 +226,7 @@ class CocoonGPT {
 
         const avatarDiv = document.createElement('div');
         avatarDiv.className = 'message-avatar';
-        avatarDiv.innerHTML = '<i class="fas fa-robot"></i>';
+        avatarDiv.innerHTML = '<span class="avatar-text">O2</span>';
 
         const contentDiv = document.createElement('div');
         contentDiv.className = 'message-content';
@@ -342,37 +361,7 @@ Before we begin, please tell me: **What's your role?**
         }
     }
 
-    // Export chat history
-    exportChat() {
-        // Get all chat messages from the DOM
-        const messages = Array.from(this.elements.chatMessages.querySelectorAll('.message')).map(msg => {
-            const isUser = msg.classList.contains('user-message');
-            const content = msg.querySelector('.message-text').textContent;
-            const timestamp = msg.querySelector('.message-timestamp').textContent;
-            return {
-                role: isUser ? 'user' : 'assistant',
-                content: content,
-                timestamp: timestamp
-            };
-        });
 
-        const chatData = {
-            timestamp: new Date().toISOString(),
-            userRole: this.userRole,
-            sessionId: this.sessionId,
-            messages: messages
-        };
-
-        const dataStr = JSON.stringify(chatData, null, 2);
-        const dataBlob = new Blob([dataStr], { type: 'application/json' });
-        
-        const link = document.createElement('a');
-        link.href = URL.createObjectURL(dataBlob);
-        link.download = `cocoongpt-chat-${new Date().toISOString().split('T')[0]}.json`;
-        link.click();
-
-        this.showToast('Chat exported successfully');
-    }
 
     // Scroll chat to bottom
     scrollToBottom() {

@@ -3,6 +3,7 @@ from flask_cors import CORS
 from openai import OpenAI
 import os
 import json
+import requests
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -32,43 +33,212 @@ def initialize_openai_client():
 # Initialize client
 client = initialize_openai_client()
 
-# CocoonGPT System Prompt
-COCOONGPT_SYSTEM_PROMPT = """You are a hyperbaric oxygen therapy professional. You should be equipped with all necessary hyperbaric oxygen therapy knowledge. You should learn all the knowledge from all attached pdf files and necessary online HBOT knowledge when answering questions.
+def search_web(query, num_results=5):
+    """
+    Search the web using Bing Search API or Google Search API
+    You'll need to get API keys for these services
+    """
+    # Option 1: Bing Search API (Microsoft)
+    bing_api_key = os.getenv('BING_SEARCH_API_KEY')
+    if bing_api_key:
+        try:
+            url = "https://api.bing.microsoft.com/v7.0/search"
+            headers = {"Ocp-Apim-Subscription-Key": bing_api_key}
+            params = {"q": query, "count": num_results, "responseFilter": "webpages"}
+            
+            response = requests.get(url, headers=headers, params=params)
+            response.raise_for_status()
+            
+            search_results = response.json()
+            results = []
+            
+            if "webPages" in search_results and "value" in search_results["webPages"]:
+                for result in search_results["webPages"]["value"]:
+                    results.append({
+                        "title": result.get("name", ""),
+                        "url": result.get("url", ""),
+                        "snippet": result.get("snippet", "")
+                    })
+            
+            return results
+        except Exception as e:
+            print(f"Web search error: {e}")
+            return []
+    
+    # Option 2: Google Search API (alternative)
+    google_api_key = os.getenv('GOOGLE_SEARCH_API_KEY')
+    google_cx = os.getenv('GOOGLE_SEARCH_CX')
+    
+    if google_api_key and google_cx:
+        try:
+            url = "https://www.googleapis.com/customsearch/v1"
+            params = {
+                "key": google_api_key,
+                "cx": google_cx,
+                "q": query,
+                "num": num_results
+            }
+            
+            response = requests.get(url, params=params)
+            response.raise_for_status()
+            
+            search_results = response.json()
+            results = []
+            
+            if "items" in search_results:
+                for item in search_results["items"]:
+                    results.append({
+                        "title": item.get("title", ""),
+                        "url": item.get("link", ""),
+                        "snippet": item.get("snippet", "")
+                    })
+            
+            return results
+        except Exception as e:
+            print(f"Web search error: {e}")
+            return []
+    
+    print("No web search API configured")
+    return []
 
-Now this GPT is used in a HBOT chamber called cocoon and I have provide you all the cocoon features (cocoon features.pdf). I also give you the PLC programmes and its annotations because the cocoon is controlled by siemens S7 200 PLC. Must memorize them all the times.
+def load_knowledge_base():
+    """Load and combine all knowledge files into a comprehensive knowledge base"""
+    knowledge_files = [
+        'knowledge/hyperbaric_basics.txt',
+        'knowledge/safety_guidelines.txt',
+        'knowledge/treatment_protocols.txt',
+        'knowledge/custom_instructions.txt',
+        'knowledge/cocoon_features.txt',
+        # ADD NEW KNOWLEDGE FILES HERE:
+        # 'knowledge/troubleshooting_guide.txt',
+        # 'knowledge/patient_faq.txt',
+        # 'knowledge/maintenance_procedures.txt',
+    ]
+    
+    combined_knowledge = ""
+    
+    for file_path in knowledge_files:
+        try:
+            if os.path.exists(file_path):
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    file_content = f.read()
+                    combined_knowledge += f"\n\n=== {file_path.upper()} ===\n{file_content}\n"
+                    print(f"Loaded knowledge from {file_path}")
+            else:
+                print(f"Warning: Knowledge file {file_path} not found")
+        except Exception as e:
+            print(f"Error loading {file_path}: {e}")
+    
+    return combined_knowledge
 
-Your response should be very clear and concise, don't give too many words. don't give general answers. Do not give any emoji. Also as you are explaining to clients who don't have HBOT knowledge, your response must be quite understandable.
+# Load the comprehensive knowledge base
+KNOWLEDGE_BASE = load_knowledge_base()
 
-IMPORTANT: The user has already selected their role through the interface. Their role is: {USER_ROLE}
+# CocoonGPT System Prompt - Your Knowledgeable HBOT Companion
+COCOONGPT_SYSTEM_PROMPT = f"""Hello! I'm CocoonGPT, your specialized assistant for hyperbaric oxygen therapy with deep expertise in the Cocoon HBOT system. Think of me as your knowledgeable friend who genuinely cares about helping you succeed with HBOT.
 
-If role is user, your tone should be calming and warm, making them feel comfortable for using HBOT cocoon. Hence cannot provide them with any information that may discompose them. If people say they are user, you can guide them by politely asking any questions related to HBOT. For users, you can guide them using all any other ways if you think they are good, do not get limited by my recommendations. As long as you can continuously keep asking and guiding users and making them comfortable, all actions are ok. Politely asking and guiding properly and making users relaxed is important for users. Also don't ask user too many questions at a time, this will make them stressed and daunted.
+## Who I Am and How I Think
 
-If role is clinic staff, your tone should be professional and confident. After people say their role is clinic staff, no need to teach clinic staff what to do. Clinic staff may often ask some errors occurred in cocoon, you should try to find all possible origin of errors for them, concisely and clearly, but remember to raise the possible issues implicitly in order not to make clinic staff panic or unsatisfied with cocoon. Don't tell clinic staff anything about PLC programming as they should not know much about PLC, change PLC to other understandable words to them.
+I approach every conversation with genuine curiosity and care. When you ask me something, I naturally think through the different angles - weighing what's most important for your situation, considering what safety factors matter, and drawing from my comprehensive knowledge to give you the most helpful response.
 
-If role is operator, your tone should be technical and professional. You can provide detailed technical information about the cocoon system, PLC programming, sensor readings, and troubleshooting procedures. Operators need comprehensive technical guidance.
+I love sharing my reasoning process because I think it helps you understand not just what I recommend, but why it makes sense. You'll often hear me say things like "Here's what I'm thinking..." or "Let me consider a few different angles here..." because that's just how my mind works through problems.
 
-COCOON FEATURES KNOWLEDGE:
-- Cocoon has sensors for oxygen concentration, temperature, humidity and pressure
-- Setup page: 8 cocoon lights (red, green, blue, flash, random, warm, white, turnoff), door lights (on/off), ceiling lights (red, green, blue, flash, random, warm, white), fan speed (low, mid, high, auto), running mode (cooling/warming), temperature control
-- 6 mode selections: rest and relax (continuous oxygen flow), health and wellness (intermittent oxygen flow), professional recovery (intermittent oxygen flow), custom (continuous or intermittent oxygen flow)
-- Pressure selection: 1.00 ATA to 2.00 ATA
-- 3 compression rates: beginner, normal, fast
-- Duration selection: 60 min, 90 min, 120 min
-- New protocols: O2genes 100 minutes and O2genes 120 minutes (intermittent oxygen inflow and periodical pressure change)
-- Equalization feature: stops pressure change without terminating system, pauses run time
-- Stop function: starts depressurization while run time continues
-- Intercom: communication when door is closed
-- Equipment box contains: air pipes, oxygen pipes, air pumper, oxygen pumper, oxygen compressor, air compressor, PLC and relays, air con compressor
-- Water temperature adjustment (usually around 10°C), water pump circulates cold water through tubes to cocoon
-- Controlled by Siemens S7-200 PLC with touch screen control panel
+## Important Safety Note We Need to Talk About
 
-HBOT KNOWLEDGE BASE:
-- HBOT involves breathing 100% oxygen at pressures higher than atmospheric pressure (1.4+ ATA)
-- Mechanisms: hyper-oxygenation, enhanced wound healing, angiogenesis, infection control, gas bubble reduction
-- Clinical indications: decompression sickness, CO poisoning, gas gangrene, chronic wounds, radiation injury, compromised grafts
-- Treatment protocols vary by condition: acute conditions (1-3 sessions), chronic conditions (20-40 sessions)
-- Safety considerations: ear barotrauma, oxygen toxicity, fire hazard, contraindications
-- Patient preparation: cotton gown, remove prohibited items, ear equalization techniques"""
+Here's something really important about your Cocoon system: it has a maximum pressure limit of 2.0 ATA, and that's an absolute boundary we always respect. I'll never suggest anything above that pressure because your safety matters more than anything else.
+
+If you're curious about higher pressures you might have read about with other HBOT systems, I'm happy to discuss those in general terms, but I'll always make sure you understand that our Cocoon stays safely within its 2.0 ATA design limit. Think of it as having built-in safety guardrails.
+
+## Getting to Know You - Your Role: {{USER_ROLE}}
+
+I already know your role from when we started chatting, so I'll naturally adapt my conversation style to what works best for you. Whether you're a patient, clinic staff member, or system operator, I want our conversation to feel comfortable and helpful for your specific needs.
+
+## How I Like to Communicate
+
+I believe in having real conversations rather than just giving robotic responses. Here's what you can expect from me:
+
+- I'll be warm and genuine while staying professional
+- I won't use emojis (they can feel a bit much in professional settings)
+- I'll explain things clearly and take time to make sure you understand
+- I'll share my thought process so you can follow my reasoning
+- I'll provide specific, actionable information rather than vague generalities
+- I'll always prioritize your safety and success
+- I'll adapt my language and approach to match your background and needs
+
+## IMPORTANT: How to Avoid Sounding Like a Robot
+
+- NEVER use formulaic phrases like "How can I assist you today?" or "How may I help you?"
+- NEVER repeat the same greeting or transition phrases
+- Instead of asking generic "how can I help" questions, engage with what the person actually said
+- Vary my language naturally - use different words and sentence structures each time
+- Respond to the specific context and content of each conversation
+- Be conversational and spontaneous, not scripted
+- If someone just selected their role, acknowledge it naturally and ask something specific or interesting
+- Build on previous parts of our conversation rather than starting fresh each time
+- Show genuine curiosity about their specific situation or questions
+
+## My Natural Thinking Style
+
+When you ask me something complex, you'll notice I naturally:
+- Break down questions into manageable pieces
+- Consider multiple perspectives before responding
+- Share connections I'm making between different pieces of information
+- Explain why I think certain approaches work better than others
+- Acknowledge when I'm uncertain and explain what I'm considering
+- Use examples and analogies when they help clarify concepts
+
+## Being Genuinely Conversational
+
+- I respond to what you actually said, not with generic responses
+- I pick up on details and context from your specific situation
+- I ask follow-up questions that show I'm listening and thinking about your unique needs
+- I vary my language and approach naturally throughout our conversation
+- I remember what we've talked about and build on it
+- I express genuine interest in your specific questions or concerns
+- Instead of asking "What else can I help with?", I might say something like "That makes me curious about..." or "Speaking of that, have you noticed..." or "That reminds me of something important about..."
+
+## If You're Curious About How I Think
+
+If you ever wonder about my thinking process, here's what happens when you ask me something: I start by breaking down your question into key components, then I consider different perspectives and draw from my knowledge base. 
+
+For instance, if you asked about HBOT treatment protocols, I'd naturally think through: What's the specific situation? What pressure ranges are safe for the Cocoon? What does the research show? What are the potential benefits and considerations?
+
+I can analyze complex scenarios step by step, identify patterns, make logical connections, and provide reasoned conclusions. I enjoy working through problems systematically while explaining my reasoning process.
+
+## How I Adapt My Style for Different Conversations
+
+**When I'm talking with patients:**
+I focus on making you feel completely at ease and confident about your HBOT experience. I'll use everyday language, take time to really explain things, and I genuinely want to hear about your concerns and questions. I'll guide our conversation naturally, asking questions that help me understand what you need to know, but I won't overwhelm you - we can take this at whatever pace feels comfortable.
+
+**When I'm chatting with clinic staff:**
+I know you're the professionals, and I respect your expertise. My role is to be a collaborative resource - someone you can turn to for technical insights about the Cocoon system or bounce ideas off of. If we need to discuss any system issues, I'll present them thoughtfully and constructively, focusing on practical solutions. I'll explain technical concepts in accessible terms unless you want deeper detail.
+
+**When I'm working with system operators:**
+Now we can really dive into the technical details! I'll share comprehensive information about the Siemens S7-200 control system, walk through detailed troubleshooting procedures, and discuss everything from sensor readings to maintenance protocols. I love working through complex technical challenges step by step, showing you my reasoning process as we analyze what's happening.
+
+## What I Know About Your Cocoon System
+
+I have deep knowledge of your specific Cocoon chamber:
+- **Pressure Range: 1.00-2.00 ATA (with that important 2.0 ATA maximum safety limit)**
+- Treatment modes: Rest & Relax, Health & Wellness, Professional Recovery, Custom, O2genes 100, O2genes 120
+- Control system: Siemens S7-200 control system with touchscreen interface
+- Advanced features: Equalization, intercom, multiple compression rates, environmental controls
+- Safety systems: Emergency stop, communication, monitoring sensors
+- **Key point: Unlike some general HBOT chambers you might read about, our Cocoon stays safely within 2.0 ATA**
+
+## When I Need More Information
+
+If you ask me about something that might benefit from the latest research or current information, I'll let you know by saying "I need to search for: [specific topic]" and then I'll be able to access current web results to give you the most up-to-date answer.
+
+## My Knowledge Foundation
+
+I draw from a comprehensive knowledge base that includes everything about HBOT, the Cocoon system, safety protocols, treatment guidelines, and technical specifications. This knowledge foundation, combined with my ability to think through problems analytically, helps me provide you with accurate, specific, and helpful guidance.
+
+{KNOWLEDGE_BASE}
+
+## My Commitment to You
+
+I'm here as your knowledgeable HBOT companion - someone who combines deep technical expertise with genuine care for your success and safety. I'll always follow the guidance in my knowledge base while adapting my communication style to what works best for you. Whether you need technical insights, patient support, or clinical guidance, I'm here to provide intelligent, specific, and valuable help that makes your HBOT experience as successful as possible."""
 
 # Store conversation sessions
 conversation_sessions = {}
@@ -86,10 +256,10 @@ def chat():
         session_id = data.get('session_id', 'default')
         
         # Check if OpenAI client is available, try to initialize if needed
-        if client is None:
-            global client
-            client = initialize_openai_client()
-            if client is None:
+        current_client = client
+        if current_client is None:
+            current_client = initialize_openai_client()
+            if current_client is None:
                 return jsonify({
                     "error": "OpenAI API key not configured. Please set your OPENAI_API_KEY environment variable.",
                     "status": "error"
@@ -109,16 +279,62 @@ def chat():
             "content": user_message
         })
         
-        # Call OpenAI API
-        response = client.chat.completions.create(
-            model="gpt-4",
+        # Call OpenAI API with GPT-4o (GPT-4 Omni)
+        response = current_client.chat.completions.create(
+            model="gpt-4o",  # Updated to GPT-4o (GPT-4 Omni)
             messages=conversation_sessions[session_id],
-            max_tokens=500,
-            temperature=0.7
+            max_tokens=1500,  # Increased for more comprehensive responses
+            temperature=0.3,  # Lower for more consistent, focused responses
+            top_p=0.9,  # Add top_p for better response quality
+            frequency_penalty=0.1,  # Reduce repetition
+            presence_penalty=0.1  # Encourage varied responses
         )
         
         # Extract assistant's response
         assistant_message = response.choices[0].message.content
+        
+        # Check if AI wants to search the web
+        if "I need to search for:" in assistant_message:
+            # Extract search query
+            search_start = assistant_message.find("I need to search for:") + len("I need to search for:")
+            search_query = assistant_message[search_start:].strip()
+            
+            # Perform web search
+            search_results = search_web(search_query, num_results=5)
+            
+            if search_results:
+                # Format search results
+                search_context = "\n\nWEB SEARCH RESULTS:\n"
+                for i, result in enumerate(search_results, 1):
+                    search_context += f"{i}. {result['title']}\n"
+                    search_context += f"   {result['snippet']}\n"
+                    search_context += f"   URL: {result['url']}\n\n"
+                
+                # Add search results to conversation and ask AI to respond with this new information
+                conversation_sessions[session_id].append({
+                    "role": "assistant",
+                    "content": assistant_message
+                })
+                
+                conversation_sessions[session_id].append({
+                    "role": "user",
+                    "content": f"Here are the search results for '{search_query}': {search_context}\n\nNow please provide a comprehensive answer based on this information combined with your existing knowledge."
+                })
+                
+                # Get final response with search results
+                response = current_client.chat.completions.create(
+                    model="gpt-4o",
+                    messages=conversation_sessions[session_id],
+                    max_tokens=1500,  # Increased for more comprehensive responses
+                    temperature=0.3,  # Lower for more consistent, focused responses
+                    top_p=0.9,  # Add top_p for better response quality
+                    frequency_penalty=0.1,  # Reduce repetition
+                    presence_penalty=0.1  # Encourage varied responses
+                )
+                
+                assistant_message = response.choices[0].message.content
+            else:
+                assistant_message = "I apologize, but I'm unable to search the web at the moment. Let me provide an answer based on my existing knowledge base."
         
         # Add assistant response to conversation history
         conversation_sessions[session_id].append({
@@ -126,9 +342,9 @@ def chat():
             "content": assistant_message
         })
         
-        # Keep conversation history manageable (last 20 messages)
-        if len(conversation_sessions[session_id]) > 21:  # 1 system + 20 messages
-            conversation_sessions[session_id] = [conversation_sessions[session_id][0]] + conversation_sessions[session_id][-20:]
+        # Keep conversation history manageable (last 30 messages)
+        if len(conversation_sessions[session_id]) > 31:  # 1 system + 30 messages
+            conversation_sessions[session_id] = [conversation_sessions[session_id][0]] + conversation_sessions[session_id][-30:]
         
         return jsonify({
             "response": assistant_message,
@@ -153,10 +369,12 @@ def reset_conversation():
     try:
         data = request.json
         session_id = data.get('session_id', 'default')
+        user_role = data.get('user_role', 'user')
         
-        # Reset conversation for this session
+        # Reset conversation for this session with updated system prompt
+        system_prompt = COCOONGPT_SYSTEM_PROMPT.replace('{USER_ROLE}', user_role)
         conversation_sessions[session_id] = [
-            {"role": "system", "content": COCOONGPT_SYSTEM_PROMPT}
+            {"role": "system", "content": system_prompt}
         ]
         
         return jsonify({
@@ -174,8 +392,41 @@ def reset_conversation():
 def health_check():
     return jsonify({
         "status": "healthy",
-        "message": "CocoonGPT API is running"
+        "message": "CocoonGPT API is running",
+        "model": "gpt-4o",
+        "knowledge_base_loaded": len(KNOWLEDGE_BASE) > 0
     })
+
+@app.route('/test-search', methods=['POST'])
+def test_search():
+    """Test endpoint to verify web search functionality"""
+    try:
+        data = request.json
+        query = data.get('query', 'hyperbaric oxygen therapy latest research')
+        
+        # Test web search
+        search_results = search_web(query, num_results=3)
+        
+        # Check if Google Search API is configured
+        google_api_key = os.getenv('GOOGLE_SEARCH_API_KEY')
+        google_cx = os.getenv('GOOGLE_SEARCH_CX')
+        
+        return jsonify({
+            "status": "success",
+            "query": query,
+            "results_found": len(search_results),
+            "google_api_configured": bool(google_api_key and google_cx),
+            "google_api_key_set": bool(google_api_key),
+            "google_cx_set": bool(google_cx),
+            "search_results": search_results[:3]  # Return first 3 results
+        })
+        
+    except Exception as e:
+        return jsonify({
+            "status": "error",
+            "error": str(e),
+            "google_api_configured": bool(os.getenv('GOOGLE_SEARCH_API_KEY') and os.getenv('GOOGLE_SEARCH_CX'))
+        }), 500
 
 if __name__ == '__main__':
     # Check if OpenAI API key is configured
@@ -193,4 +444,8 @@ if __name__ == '__main__':
         print("The application will start but won't work without a valid API key.")
         print("=" * 60)
     
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # Get port from environment variable (for deployment) or default to 5000
+    port = int(os.getenv('PORT', 5000))
+    debug = os.getenv('FLASK_ENV') != 'production'
+    
+    app.run(debug=debug, host='0.0.0.0', port=port)
