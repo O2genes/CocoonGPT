@@ -84,14 +84,14 @@ class CocoonGPT {
         // Add varied role confirmation message
         const roleMessageOptions = {
             'user': [
-                "Perfect! I'm excited to help you with your HBOT journey. I'll make sure to explain everything clearly and help you feel comfortable with the Cocoon system. What's on your mind?",
-                "Wonderful! As someone experiencing HBOT, you probably have questions about what to expect. I'm here to walk you through everything about the Cocoon system. What would you like to explore first?",
-                "Great choice! I love helping people understand HBOT and feel confident about their treatments. Whether you're curious about the process, safety, or what the experience is like, I'm here for you. What's your biggest question right now?"
+                "Perfect! I'm so excited to guide you through your HBOT journey. I love getting to know what matters most to each person I work with. What brought you to hyperbaric oxygen therapy - is there something specific you're hoping to achieve?",
+                "Wonderful! I'm here to be your guide and discover what you need to know about HBOT. Rather than just explaining everything at once, I'd love to start by understanding what you're most curious about. What's been on your mind about HBOT?",
+                "Great choice! I'm here to guide you through this experience with warmth and curiosity. I want to understand your unique situation first - what's most important to you in your HBOT experience? What drew you to it initially?"
             ],
             'clinic staff': [
-                "Great to meet you! I'm here as your collaborative resource for the Cocoon system. Whether you need technical insights, patient guidance tips, or help with protocols, I'm ready to support your important work. What's on your mind today?",
-                "Excellent! I know you're the expert when it comes to patient care, and I'm here to support you with Cocoon-specific knowledge. From troubleshooting to treatment protocols, what would be most helpful right now?",
-                "Perfect! I'm excited to work with you on anything Cocoon-related. Whether it's technical questions, patient scenarios, or system optimization, I'm here to collaborate. What's your current focus?"
+                "Great to meet you! I'm here as your collaborative resource for the Cocoon system. Whether you need technical insights, user guidance tips, or help with protocols, I'm ready to support your important work. What's on your mind today?",
+                "Excellent! I know you're the expert when it comes to user care, and I'm here to support you with Cocoon-specific knowledge. From troubleshooting to treatment protocols, what would be most helpful right now?",
+                "Perfect! I'm excited to work with you on anything Cocoon-related. Whether it's technical questions, user scenarios, or system optimization, I'm here to collaborate. What's your current focus?"
             ],
             'operator': [
                 "Excellent! I'm ready to dive into the technical details with you. From the Siemens S7-200 control system to sensor diagnostics and troubleshooting, let's get technical. What system aspect interests you most?",
@@ -327,7 +327,7 @@ Before we begin, please tell me: **What's your role?**
 <div class="role-buttons">
     <button class="role-btn" data-role="user">
         <i class="fas fa-user"></i>
-        User/Patient
+        User
     </button>
     <button class="role-btn" data-role="clinic staff">
         <i class="fas fa-user-md"></i>
