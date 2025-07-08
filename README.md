@@ -272,11 +272,6 @@ tar -czf config_backup.tar.gz .env knowledge/ static/
    black .
    flake8
    ```
-   
-### Technical Support
-- **Email**: hq@o2genes.com
-- **Phone**: +65 8802 9507
-
 ---
 
 ## Contact Information
