@@ -272,16 +272,10 @@ tar -czf config_backup.tar.gz .env knowledge/ static/
    black .
    flake8
    ```
-
-## Support
-
+   
 ### Technical Support
 - **Email**: hq@o2genes.com
 - **Phone**: +65 8802 9507
-
-### Emergency Support
-- **24/7 Hotline**: +65 8802 9507
-- **Medical Emergency**: Contact local emergency services (999 in Singapore)
 
 ---
 
