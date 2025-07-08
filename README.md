@@ -8,7 +8,6 @@
 
 CocoonGPT is an AI-powered assistant specifically designed for Hyperbaric Oxygen Therapy (HBOT) operations. Built for the Cocoon HBOT chamber system, it provides role-based guidance, safety protocols, and real-time system monitoring for users, clinic staff, and operators.
 
-![CocoonGPT Interface](docs/images/cocoongpt-interface.png)
 
 ## Features
 
