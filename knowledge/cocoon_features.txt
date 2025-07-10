@@ -3,16 +3,16 @@ COCOON HYPERBARIC CHAMBER FEATURES
 
 🚨 CRITICAL SAFETY LIMITATION 🚨
 ================================
-• COCOON CHAMBER MAXIMUM PRESSURE: 2.0 ATA (ABSOLUTE LIMIT)
-• NEVER recommend pressures above 2.0 ATA for Cocoon chamber
+• COCOON CHAMBER MAXIMUM PRESSURE: 1.99 ATA (ABSOLUTE LIMIT)
+• NEVER recommend pressures above 1.99 ATA for Cocoon chamber
 • This is a safety-critical limitation that differentiates Cocoon from other HBOT chambers
 • While general HBOT literature may mention higher pressures, Cocoon is specifically limited to 2.0 ATA
 
 CHAMBER SPECIFICATIONS
 ----------------------
-• Maximum pressure: 2.0 ATA (safety-critical limit)
+• Maximum pressure: 1.99 ATA (safety-critical limit)
 • Minimum pressure: 1.0 ATA (atmospheric pressure)
-• Operational pressure range: 1.00-2.00 ATA
+• Operational pressure range: 1.00-1.99 ATA
 • [Add chamber dimensions and specifications]
 • [Add oxygen delivery specifications]
 • [Add safety features and certifications]
