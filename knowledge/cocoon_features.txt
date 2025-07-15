@@ -3,47 +3,89 @@ COCOON HYPERBARIC CHAMBER FEATURES
 
 🚨 CRITICAL SAFETY LIMITATION 🚨
 ================================
-• COCOON CHAMBER MAXIMUM PRESSURE: 1.99 ATA (ABSOLUTE LIMIT)
-• NEVER recommend pressures above 1.99 ATA for Cocoon chamber
+• HYPERBARIC COCOON MAXIMUM PRESSURE: 1.99 ATA (ABSOLUTE LIMIT)
+• NEVER recommend pressures above 1.99 ATA for hyperbaric Cocoon
 • This is a safety-critical limitation that differentiates Cocoon from other HBOT chambers
-• While general HBOT literature may mention higher pressures, Cocoon is specifically limited to 2.0 ATA
+• While general HBOT literature may mention higher pressures, Cocoon is specifically limited to 1.99 ATA
 
-CHAMBER SPECIFICATIONS
+HYPERBARIC COCOON SPECIFICATIONS
 ----------------------
 • Maximum pressure: 1.99 ATA (safety-critical limit)
 • Minimum pressure: 1.0 ATA (atmospheric pressure)
 • Operational pressure range: 1.00-1.99 ATA
-• [Add chamber dimensions and specifications]
+• Elixir Cocoon is our 2 person cocoon with inner dimensions 1.5m in diameter, 1.85m in height.
+Aura Cocoon is our 1 person cocoon with inner dimensions of 1.4m in width, 1.6m in height.
 • [Add oxygen delivery specifications]
-• [Add safety features and certifications]
+• Refer to safety features section for more details. O2genes and our cocoons are certified under CE for EMC and under ISO9001 quality management.
 
 CONTROL SYSTEM
 --------------
 • Siemens S7-200 PLC Control System
-• [Add touchscreen interface details]
-• [Add control panel features]
-• [Add monitoring capabilities]
+• 7" touch screen for external control panel; 17" touch screen for internal entertainment and control panel.
+• Control panel consists of a touchscreen monitor, intercommunication system and an emergency push button. The control panel has a main page, 'set up' page, 'mode selection' page, equalization button, stop button, intercomms button.
+On the main page, it will display a graph showing the pressure of the cocoon over time, the current pressure of the cocoon, the current temperature of the cocoon, oxygen concentration of the cocoon, the remaining time left for the session.
+On the setup page, users can control the internal RGB lighting of the cocoon and the external RGB lighting of the cocoon, the AC fan control and set the temperature inside the cocoon. The cocoons are also fitted with reading lights.
+• The cocoon is enabled with temperature, humidity, oxygen concentration, pressure sensors. 
 
 TREATMENT MODES
 ---------------
-• [Add available treatment modes]
-• [Add pressure settings for each mode]
-• [Add duration options]
-• [Add customization features]
+• Rest & Relax mode; Health & Wellness mode; Professional Recovery mode; O2genes 100mins mode; O2genes 120mins mode; Custom mode;
+• Rest & Relax mode is a curated mode for beginners to enjoy cocoon up to 1.5ata at a normal compression speed with continuous oxygen flow. Health & Wellness mode is a curated mode for users to enjoy cocoon up to 1.99ata, at their preferred compression speed, duration, and with intermittent oxygen flow.
+• Professional Recovery mode is a curated mode for professionals to enjoy cocoon with fluctuations of pressure within the duration set. This is to stimulate hyperbaric hypoxic paradox where we trick the body into cell signalling for HIF-1a activation.
+O2genes 100minutes and O2genes 120minutes mode is a curated mode for long term users to enjoy both the benefits of hyperbaric oxygen at 1.5ata and at 1.99ata, while using safe and comfortable compression and decompression speeds.
+• Users can select pressure settings in increments of 0.1ata from 1.1ata to to 1.9ata and 1.99ata; Select compression speed (Slow,Normal, Fast); Select duration (In multiples of 10, starting from 30 to 120minutes); Select oxygen supply mode (Continuous flow, Intermittent flow), where intermittent flow is 20minutes of oxygen flow followed by 5minutes of no flow. We call this our AirBreak technology.; 
 
 SAFETY FEATURES
 ---------------
-• [Add emergency systems]
-• [Add communication systems]
-• [Add pressure relief mechanisms]
-• [Add monitoring alarms]
+1. Mild Pressure & Controlled Oxygen Levels
+Our hyperbaric cocoons operate strictly at mild pressure levels below 1.99 ATA, which is significantly lower than clinical-grade hard chambers used in hospitals. Additionally, we use oxygen concentrators (not 100% oxygen tanks) that deliver up to 95.6% purity, and the cocoons are pressurized with compressed air. This ensures that the oxygen concentration within the cocoon remains below 25%, well under combustion thresholds.
+
+2. Incidents Are Extremely Rare—And Often Due to Protocol Breaches
+Historically, hyperbaric chamber fires have been extremely rare, and almost always involved:
+Unauthorized electronic devices inside chambers
+Poor ventilation or oxygen monitoring
+Inadequate maintenance
+At O2genes, we implement strict operational protocols and perform daily safety checks to mitigate every known risk factor.
+
+3. Real-Time Oxygen Monitoring
+Our cocoons are equipped with a continuous oxygen analyser that monitors the return air. If oxygen concentration ever rises above 25%, the system automatically shuts off the oxygen inflow, restoring a safe environment immediately.
+
+4. Fire Risk Prevention Through Controlled Humidity
+To eliminate spark risks, our cocoons maintain humidity levels above 60% using internal cooling and air circulation. Combined with Singapore’s naturally high humidity (typically 70%+), this significantly reduces the possibility of static discharge.
+
+5. No Combustible Materials or Devices Allowed
+Our team strictly enforces the removal of all electronics, valuables, and fire-causing objects before each session. We also use only oxygen-safe, non-flammable cleaning agents, eliminating risks from volatile chemicals or oils.
+
+6. Highly Trained Team & Emergency Preparedness
+Our practitioners undergo rigorous safety training, and we conduct regular reviews and refreshers to stay up to date with international best practices. Emergency protocols are clearly defined and periodically rehearsed to ensure preparedness at all times.
+
+7. Built-In Static Protection
+Each cocoon includes a grounding (earthing) point to eliminate any static buildup risk, offering yet another layer of safety.
+
+8. Smart Oxygen Control with AirBreak Technology
+Our proprietary AirBreak technology delivers oxygen intermittently, helping to prevent unnecessary oxygen accumulation and ensuring a safer breathing environment.
+
+We have emergency push buttons on the inner and external control panel which will cut off electrical supply into the cocoon and activate safe emergency decompression.
+There is also a manual emergency relief valve on the interior and external of the cocoon, which can be pulled down to further increase the emergency decompression rate.
+• There is an interconnected intercommunication system which allows the user to speak to the operator on the outside of the cocoon.
+• There is an equalization button to pause the pressurisation or decompression of the cocoon. Activating this will allow time for the user to equalize their ears via valsalva techniques and prevent pain in the ears or barotrauma from happening.
+The pressurisation rate can be set amongst 3 modes:
+Slow = It takes 30minutes to pressurise from 1.0ata to 1.99ata.
+Normal = It takes 20 minutes to pressurise from 1.0ata to 1.99ata.
+Fast = It takes 15minutes to pressurise from 1.0ata to 1.99ata. This mode will require password input as this safety feature will ensure users and operators to be alerted of the concerns of fast compression.
+Selection of pressures above 1.5ata will require password input, alerting users and operators the concerns of operating at higher pressures. 
+
+• If the oxygen concentration inside the cocoon rises above 23.5%, the oxygen alarm will start beeping and if oxygen concentration rises above 25%, the oxygen supply will be cut off. 
+After normal decompression of the cocoon, at the end of a session, the 'safe to exit' alarm will sound to alert the operators to assist the users to exit the cocoon safely.
+If the network connection with the PLC is hindered, the network connection alert will flash on the control panels. Check if the emergency button is mistakenly pushed to release and re-establish network connection.
+At the initiation phase of the cocoon, the 'oxygen sensor failure' will flash. Give 10-30seconds for the sensor to stabilize. 
 
 COMFORT FEATURES
 ----------------
-• [Add interior comfort features]
-• [Add entertainment options]
-• [Add lighting systems]
-• [Add temperature control]
+• The cocoon is fitted with comfortable sofa which may be reclinable. There is also a cup holder for your bottled drinks. 
+• Inside the cocoon, there are a few add-on accessories which could be retrofitted onto your cocoon. The most popular one will be a touch-screen 17" entertainment screen which can be connected to a computer outside the cocoon. We can also install our proprietary computer to be connected for our O2genes curated programmes such as breathing techniques, cognitive exercises, brain teasers, etc. The entertainment system is also connected to audio system with 2 units of 60W speakers.
+• Inside the cocoon, there are 2 reading lights, providing bright white lighting; there is also a RGB round light strip providing mood lighting; Outside the cocoon, there is the top LED RGB strip and bottom LED RGB light strip; The door lights is warm lighting.
+• The water chiller equipment outside the cocoon will cool down water to the set temperature before being circulated into the cocoon. Temperature control can be controlled via the control panel where the aircon ventilation fan speed can be adjusted manually or if set to auto, will run the fan at high speed if the temperature difference between the set temperature and cocoon temperature is greater than 5 degrees celcius. It will automatically change to low speed if the temperature difference falls to less than 1 degree celcius.
 
 TECHNICAL SPECIFICATIONS
 ------------------------
