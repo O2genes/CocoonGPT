@@ -3,29 +3,29 @@ HYPERBARIC OXYGEN THERAPY TREATMENT PROTOCOLS
 
 PROTOCOL OVERVIEW
 -----------------
-This document outlines standardized treatment protocols for the Cocoon HBOT system. All protocols are based on Undersea and Hyperbaric Medical Society (UHMS) guidelines, international standards, and evidence-based research. Protocols must be individualized based on patient condition, medical history, and treatment response.
+This document outlines standardized treatment protocols for the hyperbaric Cocoon HBOT system. All protocols are based on Undersea and Hyperbaric Medical Society (UHMS) guidelines, international standards, and evidence-based research. Protocols must be individualized based on patient condition, medical history, and treatment response.
 
 COCOON SYSTEM SPECIFICATIONS
 ----------------------------
-• Pressure Range: 1.00 - 2.00 ATA
-• Oxygen Concentration: 21% - 100%
-• Chamber Type: Monoplace, single-patient
+• Pressure Range: 1.00 - 1.99 ATA
+• Oxygen Concentration: 21% - 95.6%
+• Cocoon Type: Monoplace, single-user (Aura Cocoon) Or Multiplace, 2-users (Elixir Cocoon) or 4-users (Altus Cocoon)
 • Control System: Siemens S7-200 PLC
 • Session Duration: 60, 90, or 120 minutes
 • Compression Rates: Beginner, Normal, Fast
-• Safety Features: Emergency stop, equalization, intercom
+• Safety Features: Emergency stop, equalization, intercomm
 
 STANDARD TREATMENT MODES
 ------------------------
 
 1. REST & RELAX MODE
    Purpose: Wellness, relaxation, mild therapeutic benefit
-   Oxygen Delivery: Continuous flow
+   Oxygen Delivery: Continuous oxygen flow with stabilized set pressure cycles
    Typical Settings:
-   - Pressure: 1.3-1.5 ATA
+   - Pressure: 1.1-1.5 ATA
    - Duration: 60-90 minutes
-   - Compression Rate: Beginner to Normal
-   - Oxygen: 95-100%
+   - Compression Rate: Beginner, Normal
+   - Delivery Oxygen: 10L/min per pax, up to 95%
    
    Applications:
    - General wellness and relaxation
@@ -36,12 +36,12 @@ STANDARD TREATMENT MODES
 
 2. HEALTH & WELLNESS MODE
    Purpose: Enhanced wellness, recovery, performance
-   Oxygen Delivery: Intermittent flow (air breaks)
+   Oxygen Delivery: Intermittent flow (air breaks) with stabilized set pressure cycles
    Typical Settings:
-   - Pressure: 1.4-1.6 ATA
-   - Duration: 90 minutes
-   - Compression Rate: Normal
-   - Oxygen: 100% with 5-minute air breaks every 25 minutes
+   - Pressure: 1.1-1.99 ATA
+   - Duration: 60, 90, 120 minutes
+   - Compression Rate: Slow, Normal, Fast
+   - Oxygen: 10L/min per pax up to 95% with 5-minute air breaks every 20 minutes of oxygen supply
    
    Applications:
    - Athletic recovery
@@ -52,12 +52,12 @@ STANDARD TREATMENT MODES
 
 3. PROFESSIONAL RECOVERY MODE
    Purpose: Sports recovery, performance enhancement
-   Oxygen Delivery: Intermittent flow with optimized cycles
+   Oxygen Delivery: Intermittent flow with fluctuating pressure cycles
    Typical Settings:
-   - Pressure: 1.5-1.8 ATA
-   - Duration: 90-120 minutes
-   - Compression Rate: Normal to Fast
-   - Oxygen: 100% with 10-minute air breaks every 30 minutes
+   - Pressure: 1.5 - 1.99 ATA
+   - Duration: 60, 90, 120 minutes
+   - Compression Rate: Slow, Normal, Fast
+   - Oxygen: 10L/min per pax up to 95% with 5-minute air breaks every 20 minutes of oxygen supply
    
    Applications:
    - Post-exercise recovery
@@ -67,19 +67,19 @@ STANDARD TREATMENT MODES
    - Endurance enhancement
 
 4. CUSTOM MODE
-   Purpose: Individualized treatment protocols
+   Purpose: Continuous oxygen flow with stabilized set pressure cycles
    Oxygen Delivery: Continuous or intermittent (as prescribed)
    Settings: Customizable based on medical prescription
-   - Pressure: 1.0-2.0 ATA (as prescribed)
+   - Pressure: 1.1-1.99 ATA (as prescribed)
    - Duration: 60-120 minutes
-   - Compression Rate: As appropriate
-   - Oxygen: Variable concentration
+   - Compression Rate: Slow, Normal, Fast
+   - Oxygen: 10L/min per pax up to 95%
    
    Applications:
-   - Medical conditions requiring specific protocols
+   - Personalised use requiring specific protocols
    - Research protocols
-   - Specialized treatments
-   - Patient-specific modifications
+   - Specialized therapies
+   - User-specific modifications
 
 5. O2GENES 100 PROTOCOL
    Purpose: Optimized intermittent protocol
