@@ -23,16 +23,14 @@ def initialize_openai_client():
         return None
         
     try:
-        # Initialize OpenAI client with explicit parameters only
-        client = OpenAI(
-            api_key=api_key,
-            timeout=30.0,
-            max_retries=3
-        )
+        # Initialize OpenAI client with minimal parameters to avoid compatibility issues
+        client = OpenAI(api_key=api_key)
         print("OpenAI client initialized successfully")
         return client
     except Exception as e:
         print(f"Error initializing OpenAI client: {e}")
+        import traceback
+        print(f"Full traceback: {traceback.format_exc()}")
         return None
 
 # Initialize client
@@ -263,10 +261,14 @@ def chat():
         # Check if OpenAI client is available, try to initialize if needed
         current_client = client
         if current_client is None:
+            print("OpenAI client not initialized, attempting to initialize...")
             current_client = initialize_openai_client()
             if current_client is None:
+                error_msg = "I apologize, but I'm having trouble connecting right now. Please try again in a moment. If you have an emergency, please use the emergency stop button or contact support immediately."
+                if not api_key:
+                    error_msg = "OpenAI API key not configured. Please set your OPENAI_API_KEY environment variable."
                 return jsonify({
-                    "error": "OpenAI API key not configured. Please set your OPENAI_API_KEY environment variable.",
+                    "error": error_msg,
                     "status": "error"
                 }), 500
         
@@ -357,12 +359,19 @@ def chat():
         })
         
     except Exception as e:
+        import traceback
         print(f"Error in chat endpoint: {str(e)}")  # For debugging
+        print(f"Full traceback: {traceback.format_exc()}")  # For detailed debugging
         
         # Check if it's an API key related error
         error_message = str(e)
         if "api_key" in error_message.lower() or "authentication" in error_message.lower():
             error_message = "OpenAI API key not configured. Please set your OPENAI_API_KEY environment variable."
+        elif "proxies" in error_message.lower():
+            error_message = "OpenAI client configuration error. Please check your OpenAI library version."
+        else:
+            # Return a generic error message to user while logging details
+            error_message = "I apologize, but I'm having trouble connecting right now. Please try again in a moment. If you have an emergency, please use the emergency stop button or contact support immediately."
         
         return jsonify({
             "error": error_message,
