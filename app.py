@@ -23,7 +23,12 @@ def initialize_openai_client():
         return None
         
     try:
-        client = OpenAI(api_key=api_key)
+        # Initialize OpenAI client with explicit parameters only
+        client = OpenAI(
+            api_key=api_key,
+            timeout=30.0,
+            max_retries=3
+        )
         print("OpenAI client initialized successfully")
         return client
     except Exception as e:
