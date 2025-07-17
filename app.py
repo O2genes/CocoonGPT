@@ -23,11 +23,14 @@ def initialize_openai_client():
         return None
         
     try:
+        # Initialize OpenAI client with minimal parameters to avoid compatibility issues
         client = OpenAI(api_key=api_key)
         print("OpenAI client initialized successfully")
         return client
     except Exception as e:
         print(f"Error initializing OpenAI client: {e}")
+        import traceback
+        print(f"Full traceback: {traceback.format_exc()}")
         return None
 
 # Initialize client
@@ -250,18 +253,37 @@ def home():
 @app.route('/chat', methods=['POST'])
 def chat():
     try:
+        print("=== CHAT ENDPOINT CALLED ===")
+        print(f"Request headers: {dict(request.headers)}")
+        print(f"Request data: {request.get_data()}")
+        
         data = request.json
+        if not data:
+            print("ERROR: No JSON data received")
+            return jsonify({"error": "No JSON data received", "status": "error"}), 400
+            
         user_message = data.get('message', '')
         user_role = data.get('user_role', 'user')
         session_id = data.get('session_id', 'default')
         
+        print(f"Parsed data - Message: '{user_message}', Role: '{user_role}', Session: '{session_id}'")
+        
         # Check if OpenAI client is available, try to initialize if needed
+        print(f"Current client status: {client}")
+        print(f"API key status: {'SET' if api_key else 'NOT SET'}")
+        
         current_client = client
         if current_client is None:
+            print("OpenAI client not initialized, attempting to initialize...")
             current_client = initialize_openai_client()
             if current_client is None:
+                error_msg = "I apologize, but I'm having trouble connecting right now. Please try again in a moment. If you have an emergency, please use the emergency stop button or contact support immediately."
+                if not api_key:
+                    error_msg = "OpenAI API key not configured. Please set your OPENAI_API_KEY environment variable."
+                    print("ERROR: OpenAI API key not set")
+                print(f"Returning error: {error_msg}")
                 return jsonify({
-                    "error": "OpenAI API key not configured. Please set your OPENAI_API_KEY environment variable.",
+                    "error": error_msg,
                     "status": "error"
                 }), 500
         
@@ -280,6 +302,9 @@ def chat():
         })
         
         # Call OpenAI API with GPT-4o (GPT-4 Omni)
+        print("Making OpenAI API call...")
+        print(f"Messages count: {len(conversation_sessions[session_id])}")
+        
         response = current_client.chat.completions.create(
             model="gpt-4o",  # Updated to GPT-4o (GPT-4 Omni)
             messages=conversation_sessions[session_id],
@@ -289,6 +314,8 @@ def chat():
             frequency_penalty=0.1,  # Reduce repetition
             presence_penalty=0.1  # Encourage varied responses
         )
+        
+        print("OpenAI API call successful")
         
         # Extract assistant's response
         assistant_message = response.choices[0].message.content
@@ -352,12 +379,19 @@ def chat():
         })
         
     except Exception as e:
+        import traceback
         print(f"Error in chat endpoint: {str(e)}")  # For debugging
+        print(f"Full traceback: {traceback.format_exc()}")  # For detailed debugging
         
         # Check if it's an API key related error
         error_message = str(e)
         if "api_key" in error_message.lower() or "authentication" in error_message.lower():
             error_message = "OpenAI API key not configured. Please set your OPENAI_API_KEY environment variable."
+        elif "proxies" in error_message.lower():
+            error_message = "OpenAI client configuration error. Please check your OpenAI library version."
+        else:
+            # Return a generic error message to user while logging details
+            error_message = "I apologize, but I'm having trouble connecting right now. Please try again in a moment. If you have an emergency, please use the emergency stop button or contact support immediately."
         
         return jsonify({
             "error": error_message,
@@ -394,7 +428,23 @@ def health_check():
         "status": "healthy",
         "message": "CocoonGPT API is running",
         "model": "gpt-4o",
-        "knowledge_base_loaded": len(KNOWLEDGE_BASE) > 0
+        "knowledge_base_loaded": len(KNOWLEDGE_BASE) > 0,
+        "openai_client_initialized": client is not None,
+        "api_key_configured": api_key is not None,
+        "api_key_length": len(api_key) if api_key else 0
+    })
+
+@app.route('/debug', methods=['GET'])
+def debug_info():
+    return jsonify({
+        "openai_client_status": str(client),
+        "api_key_set": bool(api_key),
+        "api_key_prefix": api_key[:8] + "..." if api_key else None,
+        "environment_vars": {
+            "OPENAI_API_KEY": "SET" if os.getenv('OPENAI_API_KEY') else "NOT SET",
+            "PORT": os.getenv('PORT', 'NOT SET'),
+            "FLASK_ENV": os.getenv('FLASK_ENV', 'NOT SET')
+        }
     })
 
 @app.route('/test-search', methods=['POST'])
