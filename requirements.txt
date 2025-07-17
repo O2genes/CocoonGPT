@@ -10,7 +10,7 @@ Flask-CORS==4.0.0
 Werkzeug==3.0.1
 
 # OpenAI API Integration
-openai==1.54.0
+openai>=1.50.0
 
 # Environment Variables
 python-dotenv==1.0.0
