@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CocoonGPT - Hyperbaric Oxygen Therapy Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-center">
+                <h1>CocoonGPT</h1>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Chat Interface -->
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-controls">
+                        <button class="btn-control" id="clearChat" title="Clear Chat">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Initial welcome message -->
+                    <div class="message assistant-message">
+                        <div class="message-avatar">
+                            <span class="avatar-text">O2</span>
+                        </div>
+                        <div class="message-content">
+                            <div class="message-text">
+                                <p>Hello! I'm CocoonGPT, your friendly hyperbaric oxygen therapy companion. I'm here to help you with everything related to the Cocoon HBOT system.</p>
+                                <p>To get started, I'd love to know: <strong>What's your role?</strong> This helps me tailor our conversation to what works best for you.</p>
+                                <div class="role-buttons">
+                                    <button class="role-btn" data-role="user">
+                                        <i class="fas fa-user"></i>
+                                        User
+                                    </button>
+                                    <button class="role-btn" data-role="clinic staff">
+                                        <i class="fas fa-user-md"></i>
+                                        Clinic Staff
+                                    </button>
+                                    <button class="role-btn" data-role="operator">
+                                        <i class="fas fa-cogs"></i>
+                                        Operator
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="message-timestamp">
+                                <span id="initialTimestamp"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-container">
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="messageInput" 
+                            placeholder="Type your message here..." 
+                            rows="1"
+                            disabled
+                        ></textarea>
+                        <button id="sendButton" class="send-button" disabled>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="input-status" id="inputStatus">
+                        Please select your role first
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>CocoonGPT is thinking...</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 CocoonGPT - HBOT Assistant | 
+                   Powered by OpenAI | 
+                   <span class="footer-warning">
+                       <i class="fas fa-exclamation-triangle"></i>
+                       For informational purposes only - Always consult medical professionals
+                   </span>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+﻿O2genes Hyperbaric Cocoon Troubleshooting Guide
+How to Use This Guide
+1. Identify the issue in the table below.
+2. Follow the step-by-step resolutions.
+3. If you still need assistance, contact O2genes Support. We will first assist via a video conference call to guide you and understand the problem so we can address the issue better when we are on-site.
+Issues
+	Possible causes
+	Resolutions
+	Cocoon does not pressurize
+	Door not sealed properly
+	Check door alignment and ensure door is flush with the door seal
+	Emergency valves are not fully closed
+	Ensure the internal emergency valve is pulled up fully
+
+
+Verify external relief valve is pushed up
+	Damaged pipes
+	Check and replace pipings.
+	Control panel shows no network signal
+	Emergency button activated
+	Rotate interior/exterior emergency buttons to deactivate
+	Loose wires or connection
+	Inspect wiring for damage
+	Entertainment touchscreen unresponsive
+	Loose cables
+	Replug USB/HDMI cables
+	Incompatibility issues
+	Use original adapters from suppliers
+	Cocoon RGB Lights or ceiling RGB lights are not responsive
+	Loose cables
+	Check the connection of the LED wires to the LED driver
+	Cocoon shows ‘Oxygen Sensor Failure’
+	During startup, the oxygen sensor will take time to initialise and stabilize
+	Wait 10-30s for it to initialize
+	Cocoon equipment is very noisy
+	Clogged filters or condensate bottles
+	Replace filters and empty condensate bottles
+	Loose bolt/nut
+	Open main equipment to retighten bolt/nut
+	Temperature in Cocoon not decreasing
+	Air chiller is not turned on
+	Turn on air chiller
+	Water temperature is set too high
+	Set water temperature should be at 12 or 16 degrees
+	Cocoon AC Fan is not turned on
+	Turn on AC Fan on the control panel
+	Cocoon temperature is set too high
+	Lower temperature setting on the control panel
+	Pressurisation stuck at 1.5 ATA
+	Password time out security activated, mode and pressure selection reset to “Rest & Relax”, 1.5 ATA
+	Operators need to start pressurisation within 60 seconds of password prompt screen
+	Intercomm volume too high/low
+	Intercomm volume setting is set too high/low
+	Adjust the intercomm volume knobs
+	Speakers volume too high/low
+	Speaker volume is set too high/low
+	Adjust volume knob on the audio player
+
+Adjust bluetooth volume on source device
+	Air Chiller noise
+	Vibration of the machine causes the condensate tray to  produce rattling noise
+
+
+Resonance with the surrounding
+	Ensure tray is fully inserted and tight against the Air Chiller
+
+
+Adjust position of Air Chiller until noise subsides
+
+
+Add rubber soles below air chiller wheels
+	Cocoon shows ‘Oxygen concentration too high’
+	Ambient oxygen concentration is above safety threshold
+	Open Cocoon door and wait for ambient oxygen concentration to decrease
+	Ceiling light fell
+	Not enough adhesive used
+	Remount with more adhesive
+	Internal control panel interface not starting
+	Cocoon experienced a sudden loss of power, causing data corruption
+	Open “Ni Max” program in the internal control panel, hover over “Tools”, then choose “Reset configuration data”
+	Entertainment screen position cannot be fixed in place
+	Incorrect tension setting on monitor arm
+	Adjust the tension setting on the monitor arm.
+
+
+If the monitor arm keeps dropping, increase the tension.
+
+
+If the monitor arm is always raised, decrease the tension.
+	Oxygen flow stopped while in operation
+	Mode settings
+	Oxygen delivery mode is set to “intermittent”, which will periodically stop oxygen flow.
+	Thermal overheating in main equipment
+	Open side doors of main equipment or relocate for better ventilation.
+	Plexiglass door not sliding smoothly
+	Incorrect plexiglass height adjustment
+	Use a wench to adjust the height adjustment nuts on the plexiglass holder.
+	
+
+
+
+Problem
+	Possible Causes
+	Step-by-Step Resolutions
+	Cocoon does not pressurize
+	Door not sealed properly
+	Check door alignment and ensure door is flush with the door seal
+	Emergency valves are not fully closed
+	Ensure the internal emergency valve is pulled up fully
+
+
+Verify external relief valve is pushed up
+	Control panel shows no network signal
+	Emergency button activated
+	Rotate interior/exterior emergency buttons to deactivate
+	Loose wires or connection
+	Inspect wiring for damage
+	Entertainment touchscreen unresponsive
+	Loose cables
+	Replug USB/HDMI cables
+	Incompatibility adapter issues
+	Use original adapters or Consider upgrading to O2genes’ proprietary built-in computer.
+	Cocoon RGB Lights or ceiling RGB lights are not responsive
+	Loose cables
+	Check the connection of the LED wires to the LED driver
+
+
+Check RS485 connector
+	Cocoon shows ‘Oxygen Sensor Failure’
+	During startup, the oxygen sensor will take time to initialise and stabilize
+	Wait 10-30s for it to initialize
+	Cocoon equipment is very noisy
+	Clogged filters or condensate bottles
+	Replace filters and empty condensate bottles
+	Loose bolt/nut
+	Open main equipment to retighten bolt/nut
+	Temperature in Cocoon not decreasing
+	Air chiller is not turned on
+	Turn on air chiller
+	Water temperature is set too high
+	Set water temperature should be at 12 or 16 degrees
+	Cocoon AC Fan is not turned on
+	Turn on AC Fan on the control panel via set up page
+	Cocoon temperature is set too high
+	Lower temperature setting on the control panel
+	Pressurisation stuck at 1.5 ATA
+	Password time out security activated, mode and pressure selection reset to “Rest & Relax”, 1.5 ATA
+	Provide user brief and invite the user to be inside the cocoon before setting the programme.
+
+
+Take less than 1minute to ‘start’ the protocol. 
+	There are hairline cracks on the plexiglass door
+	Do not be alarmed. It is normal and common to see surface hairline cracks on the plexiglass door. O2genes team conducts periodic checks and tests to ensure your safety and the cocoon satisfies pressure vessel human occupancy requirements.
+	Continue to monitor the hairline cracks. If it expands to be more obvious or concerning, contact our o2genes team for an adhoc service and on-site check to be safe and sure. We take safety seriously and will do our part to ensure safety.
+	The intercommunication sound level is too loud or inaudible
+	Set volume is not appropriate.
+	There are two knobs above the intercom speakers on the external control panel. The left knob controls the volume of the internal intercom while the right knob controls the volume of the exterior intercom.
+	There is a foul smell inside the cocoon.
+	
+
+	
+
+	
+
+Escalation Protocol
+If the issue persists after troubleshooting:
+1. Call +65 8802 9507 for assistance.
+2. Email [hq@O2genes.com] with:
+   * Cocoon serial number.
+   * Photos/videos of the issue.
+3. On-site support will be arranged if needed.
+________________
+
+
+Preventive Maintenance Tips
+✔ Weekly: Inspect door seals and valves.
+✔ Monthly: Test emergency buttons and network connections.
+✔ Bi-Annually: Schedule professional maintenance with O2genes.
