@@ -268,3 +268,4 @@ DISCLAIMER
 This operational manual provides general guidance for the Cocoon Hard-Shell system. Always refer to the complete manufacturer's manual for detailed specifications and procedures. This information does not constitute medical advice. For medical concerns, consult qualified healthcare professionals.
 
 [Note: This is a structured text version of the operational manual. The original PDF contains detailed diagrams, specifications, and additional technical information that should be referenced for complete operational guidance.]
+
