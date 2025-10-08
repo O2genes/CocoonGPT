@@ -1,0 +1,270 @@
+COCOON HARD-SHELL OPERATIONAL MANUAL
+=====================================
+
+IMPORTANT SAFETY NOTICE
+-----------------------
+This manual contains critical safety information for operating the Cocoon Hard-Shell Hyperbaric Oxygen Therapy system. Always follow safety protocols and consult qualified technicians for any issues.
+
+SYSTEM OVERVIEW
+---------------
+The Cocoon Hard-Shell system is a wellness-grade hyperbaric oxygen therapy chamber designed for safe operation up to 1.99 ATA maximum pressure. The system features:
+- Siemens S7-200 control system
+- Touchscreen interface
+- Multiple treatment modes
+- Advanced safety systems
+- Environmental controls
+
+SAFETY LIMITS AND RESTRICTIONS
+------------------------------
+CRITICAL: Maximum operating pressure is 1.99 ATA
+- Never exceed this limit under any circumstances
+- System will automatically stop at 1.99 ATA
+- All safety systems are designed for this maximum pressure
+- This is a wellness-grade system, not medical-grade
+
+PRE-OPERATION CHECKS
+--------------------
+Before each use, verify:
+1. System power is connected and stable
+2. All safety systems are functional
+3. Touchscreen interface is responsive
+4. Emergency stop button is accessible
+5. Communication system is working
+6. Pressure relief valves are clear
+7. Oxygen supply is adequate
+8. Environmental controls are set correctly
+
+STARTUP PROCEDURE
+-----------------
+1. Power on the system using the main power switch
+2. Wait for the Siemens control system to initialize
+3. Check all system status indicators on touchscreen
+4. Verify pressure sensors are reading atmospheric pressure (1.0 ATA)
+5. Test emergency stop functionality
+6. Confirm communication system is operational
+7. Set desired treatment parameters
+8. Begin treatment only when all systems show "READY"
+
+TREATMENT MODES
+---------------
+The Cocoon system offers several treatment modes:
+
+1. REST & RELAX MODE
+   - Pressure: 1.3-1.5 ATA
+   - Duration: 60-90 minutes
+   - Purpose: General wellness and relaxation
+
+2. HEALTH & WELLNESS MODE
+   - Pressure: 1.5-1.7 ATA
+   - Duration: 60-90 minutes
+   - Purpose: Enhanced wellness benefits
+
+3. PROFESSIONAL RECOVERY MODE
+   - Pressure: 1.7-1.9 ATA
+   - Duration: 60-90 minutes
+   - Purpose: Athletic recovery and performance
+
+4. CUSTOM MODE
+   - Pressure: 1.3-1.99 ATA (user configurable)
+   - Duration: 30-120 minutes (user configurable)
+   - Purpose: Personalized treatment protocols
+
+5. O2GENES 100 MODE
+   - Pressure: 1.0 ATA (atmospheric)
+   - Duration: 60 minutes
+   - Purpose: Oxygen therapy without pressure
+
+6. O2GENES 120 MODE
+   - Pressure: 1.2 ATA
+   - Duration: 60 minutes
+   - Purpose: Mild pressure oxygen therapy
+
+OPERATION PROCEDURES
+--------------------
+During Treatment:
+1. Monitor pressure readings continuously
+2. Watch for any system alarms or warnings
+3. Maintain communication with user if applicable
+4. Record treatment parameters and duration
+5. Be prepared to stop treatment if any issues arise
+
+Pressure Control:
+- System automatically controls pressure within set parameters
+- Manual override available for emergency situations
+- Pressure changes are gradual to ensure user comfort
+- Never attempt rapid pressure changes
+
+Environmental Controls:
+- Temperature: Maintain 20-24°C (68-75°F)
+- Humidity: Keep below 60% relative humidity
+- Ventilation: Ensure adequate air circulation
+- Lighting: Adjust to user preference
+
+SAFETY SYSTEMS
+--------------
+Emergency Stop:
+- Red button located on control panel
+- Immediately stops all system functions
+- Releases pressure safely
+- Activates emergency ventilation
+
+Pressure Relief Valves:
+- Multiple redundant safety valves
+- Automatically activate at 1.99 ATA
+- Manual override available
+- Regular inspection required
+
+Communication System:
+- Intercom for user-operator communication
+- Emergency communication protocols
+- Backup communication methods
+- Regular testing required
+
+Monitoring Sensors:
+- Pressure sensors (multiple redundant)
+- Temperature sensors
+- Oxygen concentration monitoring
+- System status indicators
+
+TROUBLESHOOTING GUIDE
+---------------------
+Common Issues and Solutions:
+
+PRESSURE ISSUES:
+- Pressure not reaching set point: Check oxygen supply, verify valve positions
+- Pressure exceeding limits: Emergency stop, check relief valves
+- Pressure fluctuations: Check for leaks, verify sensor readings
+
+COMMUNICATION PROBLEMS:
+- No audio: Check intercom connections, test backup systems
+- Static or poor quality: Clean connections, check power supply
+- Complete failure: Use emergency communication protocols
+
+TOUCHSCREEN ISSUES:
+- Unresponsive screen: Restart system, check connections
+- Display problems: Verify power supply, check for damage
+- Menu navigation issues: Reset to default settings
+
+TEMPERATURE CONTROL:
+- Temperature too high/low: Check HVAC system, verify sensors
+- Humidity issues: Check dehumidification system
+- Ventilation problems: Verify fan operation, check filters
+
+MAINTENANCE REQUIREMENTS
+------------------------
+Daily:
+- Visual inspection of all components
+- Test emergency stop functionality
+- Check pressure sensor readings
+- Verify communication system
+- Clean touchscreen and controls
+
+Weekly:
+- Full system diagnostic check
+- Test all safety systems
+- Inspect pressure relief valves
+- Check oxygen supply connections
+- Verify environmental controls
+
+Monthly:
+- Calibrate pressure sensors
+- Test emergency procedures
+- Inspect all electrical connections
+- Check system logs for errors
+- Update software if available
+
+Quarterly:
+- Professional system inspection
+- Pressure vessel inspection
+- Safety system certification
+- Complete system testing
+- Documentation review
+
+EMERGENCY PROCEDURES
+--------------------
+In Case of Emergency:
+1. IMMEDIATELY press emergency stop button
+2. Follow emergency evacuation procedures
+3. Contact emergency services if needed
+4. Document incident details
+5. Do not restart system until cleared by qualified technician
+
+Medical Emergency:
+1. Stop treatment immediately
+2. Begin emergency decompression
+3. Contact medical professionals
+4. Follow established emergency protocols
+5. Document all actions taken
+
+System Malfunction:
+1. Stop treatment safely
+2. Isolate system from power
+3. Contact technical support
+4. Do not attempt repairs unless qualified
+5. Document malfunction details
+
+SHUTDOWN PROCEDURE
+------------------
+Normal Shutdown:
+1. Complete current treatment cycle
+2. Gradually reduce pressure to atmospheric
+3. Turn off oxygen supply
+4. Shut down environmental controls
+5. Power off system using main switch
+6. Document treatment session
+
+Emergency Shutdown:
+1. Press emergency stop immediately
+2. Follow emergency procedures
+3. Isolate system from power
+4. Contact appropriate personnel
+5. Document incident
+
+RECORD KEEPING
+--------------
+Maintain records of:
+- Daily system checks
+- Treatment sessions
+- Maintenance activities
+- Incidents or malfunctions
+- User feedback
+- System performance data
+
+All records should include:
+- Date and time
+- Personnel involved
+- Details of activities
+- Any issues encountered
+- Actions taken
+- Follow-up required
+
+TECHNICAL SPECIFICATIONS
+------------------------
+Maximum Operating Pressure: 1.99 ATA
+Power Requirements: [As specified in original manual]
+Dimensions: [As specified in original manual]
+Weight: [As specified in original manual]
+Oxygen Requirements: [As specified in original manual]
+Environmental Conditions: [As specified in original manual]
+
+CONTACT INFORMATION
+-------------------
+Technical Support: [Contact details from original manual]
+Emergency Contact: [Emergency contact from original manual]
+Manufacturer: [Manufacturer details from original manual]
+Service Provider: [Service provider details from original manual]
+
+IMPORTANT NOTES
+---------------
+- This is a wellness-grade system, not medical-grade
+- Always follow manufacturer guidelines
+- Regular maintenance is essential for safe operation
+- Only qualified personnel should perform repairs
+- Keep this manual accessible at all times
+- Update contact information as needed
+
+DISCLAIMER
+----------
+This operational manual provides general guidance for the Cocoon Hard-Shell system. Always refer to the complete manufacturer's manual for detailed specifications and procedures. This information does not constitute medical advice. For medical concerns, consult qualified healthcare professionals.
+
+[Note: This is a structured text version of the operational manual. The original PDF contains detailed diagrams, specifications, and additional technical information that should be referenced for complete operational guidance.]

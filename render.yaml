@@ -4,7 +4,7 @@ services:
     env: python
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app --host=0.0.0.0 --port=$PORT
+    startCommand: gunicorn app:app --host=0.0.0.0 --port=$PORT --workers=2 --timeout=120
     envVars:
       - key: OPENAI_API_KEY
         sync: false
@@ -12,4 +12,6 @@ services:
         value: 3.11.10
       - key: FLASK_ENV
         value: production
+      - key: PORT
+        value: 10000
     plan: free 

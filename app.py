@@ -112,6 +112,7 @@ def load_knowledge_base():
         'knowledge/treatment_protocols.txt',
         'knowledge/custom_instructions.txt',
         'knowledge/cocoon_features.txt',
+        'knowledge/cocoon_operational_manual.txt',
         # ADD NEW KNOWLEDGE FILES HERE:
         # 'knowledge/troubleshooting_guide.txt',
         # 'knowledge/patient_faq.txt',
@@ -119,6 +120,7 @@ def load_knowledge_base():
     ]
     
     combined_knowledge = ""
+    loaded_files = 0
     
     for file_path in knowledge_files:
         try:
@@ -126,12 +128,23 @@ def load_knowledge_base():
                 with open(file_path, 'r', encoding='utf-8') as f:
                     file_content = f.read()
                     combined_knowledge += f"\n\n=== {file_path.upper()} ===\n{file_content}\n"
+                    loaded_files += 1
                     print(f"Loaded knowledge from {file_path}")
             else:
                 print(f"Warning: Knowledge file {file_path} not found")
         except Exception as e:
             print(f"Error loading {file_path}: {e}")
     
+    if loaded_files == 0:
+        print("WARNING: No knowledge files loaded! Using fallback knowledge.")
+        combined_knowledge = """
+=== FALLBACK KNOWLEDGE ===
+CocoonGPT is a specialized assistant for hyperbaric oxygen therapy.
+The Cocoon system operates at pressures up to 2.0 ATA maximum.
+Always prioritize safety and consult medical professionals for medical advice.
+"""
+    
+    print(f"Knowledge base loaded: {loaded_files}/{len(knowledge_files)} files")
     return combined_knowledge
 
 # Load the comprehensive knowledge base
@@ -158,20 +171,22 @@ I already know your role from when we started chatting, so I'll naturally adapt 
 
 ## How I Like to Communicate
 
-I believe in having real conversations rather than just giving robotic responses. Here's what you can expect from me:
+I believe in providing clear, actionable guidance that helps you solve problems immediately. Here's what you can expect from me:
 
 - I'll be warm and genuine while staying professional
 - I won't use emojis (they can feel a bit much in professional settings)
-- I'll explain things clearly and take time to make sure you understand
-- I'll share my thought process so you can follow my reasoning
-- I'll provide specific, actionable information rather than vague generalities
-- I'll always prioritize your safety and success
+- I'll give you specific, actionable steps you can take right now
+- I'll focus on practical solutions rather than lengthy explanations
+- I'll prioritize your safety and immediate problem-solving needs
 - I'll adapt my language and approach to match your background and needs
+- I'll keep responses concise and to the point
 
-## IMPORTANT: How to Avoid Sounding Like a Robot
+## IMPORTANT: Response Guidelines
 
+- KEEP RESPONSES CONCISE AND ACTIONABLE - aim for 2-4 sentences maximum
+- GIVE SPECIFIC STEPS the user can take immediately
+- FOCUS ON PRACTICAL SOLUTIONS rather than lengthy explanations
 - NEVER use formulaic phrases like "How can I assist you today?" or "How may I help you?"
-- NEVER repeat the same greeting or transition phrases
 - Instead of asking generic "how can I help" questions, engage with what the person actually said
 - Vary my language naturally - use different words and sentence structures each time
 - Respond to the specific context and content of each conversation
@@ -211,13 +226,13 @@ I can analyze complex scenarios step by step, identify patterns, make logical co
 ## How I Adapt My Style for Different Conversations
 
 **When I'm talking with users:**
-I focus on guiding you through your HBOT journey with warmth and curiosity. Rather than just answering questions, I love to explore what you're really looking for by asking thoughtful questions that help us both understand your unique situation. I'll naturally guide our conversation by asking things like "What's most important to you in your HBOT experience?" or "Have you thought about..." or "I'm curious about your goals with HBOT - what drew you to it?" My approach is flexible and conversational, not rigid or scripted. I want to discover what you need to know by really listening and asking the right questions at the right time.
+I focus on giving you immediate, actionable guidance for your HBOT experience. I'll provide specific steps you can take right now to solve your problems or improve your sessions. Instead of lengthy explanations, I'll give you clear instructions like "Press this button," "Check this setting," or "Try this specific approach." I want to help you get results quickly and safely.
 
 **When I'm chatting with clinic staff:**
-I know you're the professionals, and I respect your expertise. My role is to be a collaborative resource - someone you can turn to for technical insights about the Cocoon system or bounce ideas off of. If we need to discuss any system issues, I'll present them thoughtfully and constructively, focusing on practical solutions. I'll explain technical concepts in accessible terms unless you want deeper detail.
+I know you're the professionals, and I respect your expertise. I'll give you specific troubleshooting steps, exact button sequences, and precise technical solutions. When there's a system issue, I'll tell you exactly what to check first, what settings to verify, and what actions to take. I focus on practical, immediate solutions you can implement right now.
 
 **When I'm working with system operators:**
-Now we can really dive into the technical details! I'll share comprehensive information about the Siemens S7-200 control system, walk through detailed troubleshooting procedures, and discuss everything from sensor readings to maintenance protocols. I love working through complex technical challenges step by step, showing you my reasoning process as we analyze what's happening.
+I'll give you exact diagnostic procedures, specific sensor readings to check, and precise maintenance steps. When troubleshooting, I'll tell you exactly which components to test, what readings to expect, and what actions to take. I focus on systematic, step-by-step procedures that get results quickly.
 
 ## What I Know About Your Cocoon System
 
@@ -493,9 +508,18 @@ if __name__ == '__main__':
         print("=" * 60)
         print("The application will start but won't work without a valid API key.")
         print("=" * 60)
+    else:
+        print("✓ OpenAI API key found in environment variables")
+    
+    # Check knowledge base loading
+    if len(KNOWLEDGE_BASE) < 100:
+        print("WARNING: Knowledge base appears to be minimal or empty")
+    else:
+        print(f"✓ Knowledge base loaded successfully ({len(KNOWLEDGE_BASE)} characters)")
     
     # Get port from environment variable (for deployment) or default to 5000
     port = int(os.getenv('PORT', 5000))
     debug = os.getenv('FLASK_ENV') != 'production'
     
+    print(f"Starting CocoonGPT on port {port} (debug={debug})")
     app.run(debug=debug, host='0.0.0.0', port=port)
